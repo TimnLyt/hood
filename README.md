@@ -2,6 +2,6 @@
 Creating a resale application that provides a marketplace for people to sell their things. 
 
 ## Table of Contents
-* [General Information] (#general-information)
+* [General info](#general-info)
 
-## General Information
+## General info
