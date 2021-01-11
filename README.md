@@ -14,4 +14,5 @@ Timothy Lytvynchuk
 
 ## Introduction
 Team name: Team Hood
+<br/>
 This team will be recreating a resale application that will provide  a market place for sellers and buyers. 
