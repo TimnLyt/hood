@@ -5,4 +5,4 @@ Creating a resale application that provides a marketplace for people to sell the
 * [General info](#general-info)
 
 ## General info
-The team invovled are Maria, Abenezer, Turki, and Timothy.
+Team name: Team Hood.
