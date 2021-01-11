@@ -10,9 +10,10 @@ Creating a resale application that provides a marketplace for people to sell the
 ## Technologies
 ___
 Project is created with:
-*HTML CSS
-*JavaScript
-*React
-*Express
-*PostgreSQL
-*Node.js
+
+* HTML CSS
+* JavaScript
+* React
+* Express
+* PostgreSQL
+* Node.js
