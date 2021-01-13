@@ -1,5 +1,5 @@
 # Cloning OfferUp - Resale Application
-Creating a resale application that provides a marketplace for people to sell their stuff. 
+Creating a resale application that provides a marketplace for people to sell their things.
 
 ## Table of Contents
 * [General info](#general-info)
@@ -7,10 +7,22 @@ Creating a resale application that provides a marketplace for people to sell the
 
 ## General info 
 Group members:
+<br/>
 Maria Fernandez
+<br/>
 Abenezer Taddesse
+<br/>
 Turki Bkaily
+<br/>
 Timothy Lytvynchuk
+
+Project is created with:
+* HTML CSS
+* JavaScript
+* React
+* Express
+* PostgreSQL
+* Node.js
 
 ## Introduction
 Team name: Team Hood
