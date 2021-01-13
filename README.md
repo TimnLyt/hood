@@ -5,7 +5,8 @@ Cloning OfferUp - Resale Application
 * [General info](#general-info)
 * [Introduction](#introduction)
 
-## General info
+## General info 
+
 Group members:
 Maria Fernandez
 Abenezer Taddesse
