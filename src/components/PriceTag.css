@@ -1,7 +1,10 @@
 .price-container{
-    background-color: silver;
+    background-color:silver;
+    margin-top: 30px;    
+    width: fit-content;
+    margin-left:200px;  
     
-    width:fit-content;
-    margin-top:40px;
+    
+    
     
 }

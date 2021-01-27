@@ -1,12 +1,12 @@
 .item-container{
     background-color: bisque;
-    margin-top: 450px;
-    margin-bottom: 10px;
+    margin-bottom: 100px;
     margin-left: 350px;
     margin-right:50px;
-    position: relative;
-    width: 40%;
+    width: 50%;
     border-style: solid;
+    
+    
 }
 
 .item-container h1{

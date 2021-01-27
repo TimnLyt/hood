@@ -1,18 +1,14 @@
 import "./App.css";
-import ItemDesc from "./components/ItemDesc";
+import Overview from "./components/Overview";
 import ItemInfo from "./components/ItemInfo";
 import Map from "./components/Map";
-import PriceTag from "./components/PriceTag";
-import UserProfile from "./components/UserProfile";
 
 function App() {
   return (
     <>
-      <PriceTag />
-      <ItemDesc />
+      <Overview />
       <ItemInfo />
       <Map />
-      <UserProfile />
     </>
   );
 }

@@ -1,14 +1,45 @@
-.user-containter{
-    background-color:aquamarine;
-    padding:0;
+.userprofile-container{
+    background-color:silver;
+    width:500px;
+    height: 150px;
+    padding: 0 auto;
     margin-top:10px;
-    width: fit-content;
-    margin-left:10px;
-    margin-right:10px;
+    margin-left: 1400px;
+    margin-bottom: 20px;
+   
 }
 
-.profile-pic{
-    width:20px;
-    height:20px;
-    border-radius:50%;
+.circle{
+width: 100px;
+  height: 100px;
+  background-color: #764ABC;
+  float: left;
+  border-radius: 50%;
+  shape-outside: square(-60%);
+  display: flex;
+    
+  margin-top:10px;
+  margin-left:20px;
+  
+
+  
 }
+
+.userprofile-container h1{
+    text-align:center;
+    margin-top:-250px;
+    margin-bottom:20px;
+}
+
+.userprofile-container h2{
+    text-align: center;
+    border-style: solid;
+    width:200px;
+    line-height: 20px;
+    margin-left:20p;
+    margin-bottom:20px;
+    display:inline-block;
+    transform:translateX(40%);
+    
+}
+
