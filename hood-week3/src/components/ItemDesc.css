@@ -1,0 +1,27 @@
+.item-container{
+    background-color: bisque;
+    margin-bottom: 100px;
+    margin-left: 350px;
+    margin-right:50px;
+    width: 50%;
+    border-style: solid;
+    
+    
+}
+
+.item-container h1{
+    margin:0;
+    font-size: 30px;
+    line-height: 35px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.item-container h2{
+    margin:0;
+    font-size: 24px;
+    line-height: 35px;
+    margin-left: 20px;
+}
+
