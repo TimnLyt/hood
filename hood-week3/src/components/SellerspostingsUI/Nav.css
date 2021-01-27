@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+h2{
+    font-family: "Alfa+Slab+One&display", sans-serif;
+    font-weight: 1000;
+    font-size: 30px;
+    color: #edf0f1;
+    text-decoration: none;
+    cursor: pointer;
+    justify-content: flex-start;
+    padding-right: 50px;
+}
+
+li, a {
+    font-family: "Alfa+Slab+One&display", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+.search-box {
+    background: #2f3640;
+    height: 30px;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.search-box:hover > .search-txt {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.search-box:hover > .search-btn {
+    background: white;
+}
+
+.search-box:hover p {
+    color: #2f3640;
+    font-weight: 900;
+}
+
+p {
+    color:white;
+    font-weight: 500;
+    padding-right: 18px;
+}
+
+.search-btn {
+    color: white;
+    float: right;
+    width: 6px;
+    height: 30px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 30px;
+    width: 0px;
+}
+
+header {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    background-color: rgb(33, 124, 53);
+}
+
+nav {
+    padding: 0 0 0 10px;
+}
+
+a {
+    padding: 0 10px 0 30px;
+}
+
+.nav_links {
+    display: flex;
+    list-style: none;
+}
+
+.nav_links li .search-box {
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: #2f3640;
+}
