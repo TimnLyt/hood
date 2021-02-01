@@ -13,7 +13,6 @@
         <HomePageImg/>
         <HomePageImg/>
         
-       
-        </div>
+         </div>
         )
 }

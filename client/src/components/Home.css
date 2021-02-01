@@ -1,6 +1,6 @@
-.wrapper {
+.wrapper{
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     width: 100vw;
     justify-content: space-evenly;
   }
