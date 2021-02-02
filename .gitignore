@@ -3,4 +3,5 @@
 dist
 .eslintcache
 node_modulesi
-
+package-lock.json
+.DS_Store
