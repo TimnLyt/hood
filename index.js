@@ -8,7 +8,7 @@ const user= [{id: "1", place: "Seattle WA", item: "Book" , price: 80 , sold: tru
              {id: "2", place: "Los Angloes CA", item: "Car" , price: 9000, sold: true},
              {id: "3", place: "Houstan TX", item: "phone", price: 300, sold: false}
 ]
-=======
+
 const itemRouter = require("./routers/ItemPage");
 
 const NavRouters = require("./routers/nav_router")
