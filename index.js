@@ -8,7 +8,7 @@ const NavRouters = require("./routers/nav_router")
 
 app.use(logger)
 app.use("/v0",HomeRouters)
-app.use("/v0",NavRouters)
+app.use("/nav",NavRouters)
 
 app.get('/', (req, res) => {
   console.log("home")
