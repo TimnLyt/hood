@@ -18,26 +18,26 @@ app.get('/', (req, res) => {
 
 app.get('/sell', (req, res) => {
   console.log("sell")
-  res.send("201")
-  res.status("201")
+  res.send("sell")
+  res.status("sell")
 })
 
 app.get('/about', (req, res) => {
   console.log("about")
-  res.send("201")
-  res.status("201")
+  res.send("about")
+  res.status("about")
 })
 
-app.get('/log in', (req, res) => {
+app.get('/login', (req, res) => {
   console.log("log in")
-  res.send("201")
-  res.status("201")
+  res.send("log in")
+  res.status("log in")
 })
 
-app.get('/sign in', (req, res) => {
+app.get('/signin', (req, res) => {
   console.log("sign in")
-  res.send("201")
-  res.status("201")
+  res.send("sign in")
+  res.status("sign in")
 })
 
  function logger (req, res, next) {
@@ -46,5 +46,5 @@ app.get('/sign in', (req, res) => {
   return
 }
 app.listen(port, () => {
-  console.log("Example app listening at http://localhost:${port}")
+  console.log(`Example app listening at http://localhost:${port}`)
 })
