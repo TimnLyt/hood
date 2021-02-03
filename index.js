@@ -17,6 +17,12 @@ app.get('/', (req, res) => {
   res.status("201")
 });
 
+app.get("/v1/item", (req, res) => {
+   console.log("item")
+   res.send("201")
+   res.status("201")
+});
+
  function logger (req, res, next) {
   console.log("log ")
   next()
