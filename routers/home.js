@@ -7,16 +7,16 @@ HomeRouters.route('/Home')
 .get((req, res) => {
   console.log("home page ")
   //res.json(null) still workin on that 
-  res.send("Tirki")
+  res.send("home page")
 })
 
 HomeRouters.get('/Home/:id', (req, res) => {
-  console.log("home page ")
+  console.log(" git home page id ")
   res.send("id")
 })
 
 HomeRouters.post('/Home/:id', (req, res) => {
-  console.log("home page id ")
+  console.log(" post home page id ")
   res.send("id")
 })
 
