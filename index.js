@@ -16,25 +16,25 @@ app.get('/', (req, res) => {
   res.status("201")
 })
 
-app.get('/', (req, res) => {
+app.get('/sell', (req, res) => {
   console.log("sell")
   res.send("201")
   res.status("201")
 })
 
-app.get('/', (req, res) => {
+app.get('/about', (req, res) => {
   console.log("about")
   res.send("201")
   res.status("201")
 })
 
-app.get('/', (req, res) => {
+app.get('/log in', (req, res) => {
   console.log("log in")
   res.send("201")
   res.status("201")
 })
 
-app.get('/', (req, res) => {
+app.get('/sign in', (req, res) => {
   console.log("sign in")
   res.send("201")
   res.status("201")
