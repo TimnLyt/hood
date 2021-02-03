@@ -1,0 +1,5 @@
+.env
+*.code-workspace
+.eslintcache
+node_modules
+.DS_Store
