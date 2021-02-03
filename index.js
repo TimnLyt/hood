@@ -4,9 +4,7 @@ const port = 4000;
 const HomeRouters = require("./routers/home")
 const offersRouters=require('./routers/offers')
 
-<<<<<<< HEAD
 app.use(express.json());
-=======
 CreateRouterHomepage
 const user= [{id: "1", place: "Seattle WA", item: "Book" , price: 80 , sold: true},
              {id: "2", place: "Los Angloes CA", item: "Car" , price: 9000, sold: true},
@@ -21,19 +19,15 @@ const NavRouters = require("./routers/nav_router")
 
 
 
->>>>>>> week4
 app.use(logger)
 
 app.use(express.json());
 app.use("/v1", itemRouter);
 
 app.use("/v0",HomeRouters)
-<<<<<<< HEAD
 app.use("/offers",offersRouters)
-=======
 app.use("/nav",NavRouters)
 
->>>>>>> week4
 
 app.get('/', (req, res) => {
   console.log("home")
