@@ -1,10 +1,9 @@
 const express = require("express")
 const itemRouter = express.Router();
 
-
-
-itemRouter.route('v1/item')
+itemRouter.route('/')
     .get(function(req, res, next) {
+        // The term page here is a misnomer. We're not returning pages.
        console.log("items page")
        res.send("request items page")
     })
@@ -12,8 +11,7 @@ itemRouter.route('v1/item')
         res.sendStatus(404);
     });
 
-
-itemRouter.route('v1/item/:id')
+itemRouter.route('/:id')
     .get(function (req, res, next) {
         console.log("items id page")
         res.send("request get items id page")
@@ -26,6 +24,5 @@ itemRouter.route('v1/item/:id')
         console.log("items id page")
         res.send("request delete items id page")
     });
-
 
 module.exports = itemRouter;
