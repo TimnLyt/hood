@@ -1,7 +1,9 @@
+import React from "react"
 function EditItem() {
     return (
       <div >
-        <h2>Item</h2>
+        <h1>ho</h1>
       </div>
     );
   }
+  export default EditItem ;
