@@ -1,11 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
-import EditItem from "./Components/CreateItem"
+import logo from "./logo.svg";
+import "./App.css";
+import EditItem from "./Components/EditItems";
 
 function App() {
   return (
     <div className="App">
-      <EditItem/>
+      <EditItem />
     </div>
   );
 }
