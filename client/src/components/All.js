@@ -1,3 +1,4 @@
+ 
 import React from 'react';
 import './All.css'
 import {
@@ -37,4 +38,5 @@ const All=(props)=>{
      
 };
 
+ 
 export default All;
