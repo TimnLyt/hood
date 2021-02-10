@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import logo from "./logo.svg";
 import "./App.css";
 import { ChatEngine } from "react-chat-engine";
@@ -12,7 +11,6 @@ export function App() {
       userSecret="123"
       renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps} />}
     />
-=======
 import logo from './logo.svg';
 import './App.css';
 
@@ -34,7 +32,6 @@ function App() {
         </a>
       </header>
     </div>
->>>>>>> origin/skeleton
   );
 }
 
