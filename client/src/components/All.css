@@ -1,0 +1,11 @@
+.big{
+    margin-top:50px;
+    width:100%;
+    height:max-content;
+    border-style: solid;
+    position: relative;
+    background-color: azure;
+}
+.user{
+    margin-top: 20px;
+}
