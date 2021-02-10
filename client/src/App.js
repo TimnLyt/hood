@@ -6,6 +6,8 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import All from './components/All';
 import Imgex from './components/Imgex'
 import Nav from './components/nav'
+import User_profile from './components/user_profile'
+import Home from './components/Home'
 export function App() {
   return (
     <>
@@ -23,6 +25,9 @@ export function App() {
           <Imgex/><All />
         </Route>
         <Route path='/'>
+
+        <Route path="/Home" exact component={Home}/>
+        <Route Path="/User_profile" component={User_profile}/>  
            
         </Route>
         <Route>

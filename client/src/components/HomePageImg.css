@@ -1,0 +1,28 @@
+.container {
+    width: 300px;
+    height: 300px;
+    border: 1px solid ;
+    margin: 10px;
+    padding: 0px;
+    border-radius: 20px;
+  }
+.img{
+
+   
+    justify-content: center;
+    align-content: space-around;
+    border-bottom:  solid;
+    width: 300px;
+    height: 70px;
+    padding-top: 70px;
+   
+    
+}
+
+.h4{
+
+    background-color: lawngreen;
+    align-items: stretch;
+    justify-content: center;
+    
+}

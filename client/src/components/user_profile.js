@@ -24,7 +24,7 @@ class User_profile extends Component {
                 <header class="banner">
                 
                 </header>
-                <header class="container">
+                <header class="container1">
                     <header class="info">
                         <div class="photo"></div>
                             <div class="underphoto">
