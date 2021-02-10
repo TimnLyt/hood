@@ -2,6 +2,7 @@
   "name": "service",
   "version": "1.0.0",
   "description": "",
+<<<<<<< HEAD
   "main": "service.js",
   "scripts": {
     "start": "nodemon index.js",
@@ -12,4 +13,16 @@
   "dependencies": {
     "express": "^4.17.1"
   }
+=======
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+>>>>>>> origin/skeleton
 }
