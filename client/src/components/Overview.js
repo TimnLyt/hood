@@ -1,9 +1,9 @@
 import React from "react";
 import "./Overview.css";
 import "../App.css";
-import PriceTag from "../components/PriceTag";
-import UserProfile from "../components/UserProfile";
-import ItemDesc from "../components/ItemDesc";
+import PriceTag from "./PriceTag";
+import UserProfile from "./UserProfile";
+import ItemDesc from "./ItemDesc";
 
 function Overview() {
   return (
