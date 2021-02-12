@@ -11,7 +11,7 @@ import {
 } from "@material-ui/core";
 import Cont from './Cont';
  
-import User from './User';
+import User from './Userc';
 
 const useStyles = makeStyles((theme) => ({
     user: {
