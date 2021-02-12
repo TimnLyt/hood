@@ -11,7 +11,6 @@ function UserProfile() {
         <h2>Make Offer</h2>
         <h2>Ask For Detail</h2>
       </div>
-      ;
     </>
   );
 }

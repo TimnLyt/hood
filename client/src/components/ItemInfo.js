@@ -21,7 +21,6 @@ function ItemInfo() {
           scelerisque, sagittis mi eu, dapibus metus. Proin sit amet.
         </p>
       </div>
-      ;
     </>
   );
 }

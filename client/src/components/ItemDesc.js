@@ -10,7 +10,6 @@ function ItemDesc() {
         <h2>Item Location:</h2>
         <h2>Date Posted:</h2>
       </div>
-      ;
     </>
   );
 }

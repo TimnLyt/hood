@@ -8,7 +8,6 @@ function PriceTag() {
       <div className="price-container">
         <h1>$ Price </h1>
       </div>
-      ;
     </>
   );
 }

@@ -8,7 +8,6 @@ function Map() {
       <div className="map-container">
         <h1>Map Placeholder</h1>
       </div>
-      ;
     </>
   );
 }

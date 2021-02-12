@@ -13,7 +13,6 @@ function Overview() {
         <ItemDesc />
         <UserProfile />
       </div>
-      ;
     </>
   );
 }
