@@ -8,7 +8,7 @@ import Imgex from './components/Imgex'
 import Nav from './components/nav'
 import User_profile from './components/user_profile'
 import Home from './components/Home'
-import ViewAllItems from './components/ItemBoxGroup';
+import ItemGroupBox from './components/ItemGroupBox';
 export function App() {
   return (
     <>
@@ -31,7 +31,7 @@ export function App() {
         <Route Path="/User_profile" component={User_profile}/>  
            
         </Route>
-        <Route Path="/ViewAllItems" component={ViewAllItems}/>
+        <Route Path="/ItemGroupBox" component={ItemGroupBox}/>
          
         <Route>
            

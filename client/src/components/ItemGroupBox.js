@@ -1,9 +1,9 @@
 
 import React from 'react';
 import ItemBox from './ItemBox';
-import './ItemBoxGroup.css';
+import './ItemGroupBox.css';
 
-export default function ItemBoxGroup(){
+export default function ItemGroupBox(){
     return(
         <div className ="wrapper">
            <ItemBox></ItemBox>

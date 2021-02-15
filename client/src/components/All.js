@@ -6,8 +6,6 @@ import {
   CardActionArea,
   CardContent,
   makeStyles,
-   
-  
 } from "@material-ui/core";
 import Cont from './Cont';
  
