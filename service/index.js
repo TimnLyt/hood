@@ -23,7 +23,7 @@ mongoose
 
 // Retain an instance of the connection so that we can log errors
 const db = mongoose.connection;
-console.log("mongo Connected");
+
 db.on("error", () => console.log("MongoDB connection error:"));
 db.on("close", () => {
   console.log("MongoDB connection closed");
