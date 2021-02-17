@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const CreatItem = new mongoose.Schema({
   itemsName: String,
@@ -6,11 +6,10 @@ const CreatItem = new mongoose.Schema({
   postedDate: { type: Date, default: Date.now },
   itemSold: Boolean,
   itemPrice: Number,
-  body: String,
-  location:String,
+  location: String,
   keywords: [String],
 });
 
-const Create = mongoose.model('Create', CreatItem);
+const Create = mongoose.model("Create", CreatItem);
 
 module.exports = Create;
