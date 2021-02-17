@@ -1,16 +1,15 @@
 const express = require("express");
 const app = express();
-const port = 6000;
-app.use(express.json())
+const port = 5000;
+const cors = require('cors');
+ 
+require('dotenv').config({ path: '../../my-app/.env' });
+//const da= require('../../my-app/.env')
 
-require('dotenv').config({ path: '../.env' });
-//const data= require('../../hood/.env')
+ 
 
 const detailRouter = require('./routers/detailRouter');
-
-
-
-
+const messageRouter = require('./routers/messageRoute')
 const mongoose = require('mongoose');
 
 const user = process.env.MONGO_USER;
@@ -30,13 +29,11 @@ db.on('error', console.error.bind(console,
   'MongoDB connection error:'));
 db.on('close', () => { console.log("MongoDB connection closed") });
 
- 
- 
-
- 
+app.use(express.json())
+app.use(cors());
 
 app.use('/v1/detail', detailRouter);
- 
+app.use('/v1/details', messageRouter)
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
