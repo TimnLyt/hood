@@ -11,6 +11,6 @@ const CreatItemSchema = new mongoose.Schema({
   keywords: [String],
 });
 
-const Create = mongoose.model("createItem", CreatItemSchema);
+const createItem = mongoose.model("createItem", CreatItemSchema);
 
-module.exports = Create;
+module.exports = createItem;
