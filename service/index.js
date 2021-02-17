@@ -16,7 +16,7 @@ const messageRouter = require('./routes/messageRoute')
 
 const user = process.env.MONGO_USER;
 const password = process.env.MONGO_PASS;
-const mongoDB = `mongodb+srv://${user}:${password}@cluster0.k6vfw.mongodb.net/MockOfferUP?retryWrites=true&w=majority`;
+const mongoDB = `mongodb+srv://${user}:${password}@cluster0.k6vfw.mongodb.net/MockOfferUp?retryWrites=true&w=majority`;
  
 mongoose
   .connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true })
