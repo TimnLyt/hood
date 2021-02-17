@@ -3,9 +3,11 @@ const app = express();
 const port = 5000;
 
 const mongoose = require('mongoose');
-require('dotenv').config();
+require('dotenv').config({ path: '../.env' });
 
  const detailRouter = require('./detailRouter');
+ const navRouter = require('./navRouter');
+ const userRouter = require('./userRouter');
 
 const user = process.env.MONGO_USER;
 const password = process.env.MONGO_PASS;
@@ -27,6 +29,8 @@ db.on('close', () => { debug('MongoDB connection closed'); });
  
 
 app.use('/v1/detail', detailRouter);
+app.use('/v1/nav', navRouter);
+app.use('/v1/user', userRouter);
  
 
 app.listen(port, () => {

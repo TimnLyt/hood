@@ -1,7 +1,7 @@
 const express = require('express');
 const daitailRouter = express.Router();
 
-const { products } = require('../client/src/components/Product');
+const { products } = require('../../client/src/components/Product');
 
 daitailRouter
   .route('/')
