@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
 
+ 
 const mockProducts = require('./mockProduct');
  
 const Product = require('../models/mockProduct');
@@ -12,6 +13,24 @@ mockProducts.products.forEach((prod) => {
     if(error){
         console.long("something went wrong");
 }});
+ 
+
+const mockItemInfo = require('./mockItemInfo');
+
+const ItemInfo = require('../models/ItemInfo');
+
+mockItemInfo.info.forEach((info) => {
+  ItemInfo.create(info).catch(err => console.log(err));
+});
+
+const mockCreateItem = require("./mockCreateItem");
+
+const createItems = require("../models/createItems");
+
+mockCreateItem.items.forEach((item) => {
+  itemData.create(item).catch((err) => console.log(err));
+});
+ 
 
 const user = process.env.MONGO_USER;
 const password = process.env.MONGO_PASS;
