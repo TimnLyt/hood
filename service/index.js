@@ -2,10 +2,12 @@ const express = require("express");
 const app = express();
 const port = 5000;
 
-const mongoose = require("mongoose");
-require("dotenv").config();
+const mongoose = require('mongoose');
+require('dotenv').config({ path: '../.env' });
 
-const detailRouter = require("./detailRouter");
+ const detailRouter = require('./detailRouter');
+ const navRouter = require('./navRouter');
+ const userRouter = require('./userRouter');
 
 const user = process.env.MONGO_USER;
 const password = process.env.MONGO_PASS;
@@ -23,7 +25,7 @@ mongoose
 
 // Retain an instance of the connection so that we can log errors
 const db = mongoose.connection;
-console.log("mongo Connected");
+
 db.on("error", () => console.log("MongoDB connection error:"));
 db.on("close", () => {
   console.log("MongoDB connection closed");
@@ -31,6 +33,10 @@ db.on("close", () => {
 
 app.use("/v1/detail", detailRouter);
 app.use("/v1/item", itemRouter);
+app.use('/v1/detail', detailRouter);
+app.use('/v1/nav', navRouter);
+app.use('/v1/user', userRouter);
+
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
