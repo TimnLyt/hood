@@ -1,4 +1,4 @@
-exports.posts = [
+exports.info = [
     {
       id: 1,
       item: 'chair',

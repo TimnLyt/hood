@@ -8,6 +8,6 @@ const postSchema = new mongoose.Schema({
   location: String,
 });
 
-const itemInfo = mongoose.model('itemInfo', itemInfoSchema);
+const ItemInfo = mongoose.model('ItemInfo', ItemInfoSchema);
 
-module.exports = itemInfo;
+module.exports = ItemInfo;

@@ -1,6 +1,15 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
 
+const mockItemInfo = require('./mockItemInfo');
+
+const ItemInfo = require('../models/ItemInfo');
+
+mockItemInfo.info.forEach((info) => {
+  ItemInfo.create(info).catch(err => console.log(err));
+});
+
+
 const user = process.env.MONGO_USER;
 const password = process.env.MONGO_PASS;
 const mongoDB = ` mongodb+srv://<username>:<password>@cluster0.k6vfw.mongodb.net/MockOfferUp?retryWrites=true&w=majority `;

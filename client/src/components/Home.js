@@ -5,8 +5,9 @@
  export default function Home (props){
  
         return (
-        
+
         <div className ="wrapper"> 
+        
         
         <HomePageImg/>
         <HomePageImg/>
