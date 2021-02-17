@@ -34,10 +34,10 @@ function Dialogs() {
   function handleClick(event){
     event.preventDefault();
     console.log(input)
-    const newNote={
+    const newMessage={
       content:input.content
     }
-     axios.post('http://localhost:5000',newNote)
+     axios.post('http://localhost:5000/v1/details',newMessage)
   }
 
   const classes = useStyles();
