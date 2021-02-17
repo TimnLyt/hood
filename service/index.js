@@ -10,8 +10,9 @@ require("dotenv").config({ path: '../.env'});
 const detailRouter = require("./routes/detailRouter");
 const messageRouter = require('./routes/messageRoute')
 
- const navRouter = require('./navRouter');
- const userRouter = require('./userRouter');
+ const navRouter = require('./routes/navRouter');
+ const userRouter = require('./routes/userRouter');
+ const itemRouter = require('./routes/itemRouter')
 
 const user = process.env.MONGO_USER;
 const password = process.env.MONGO_PASS;
