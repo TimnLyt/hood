@@ -9,21 +9,18 @@ import Nav from "./components/nav";
 import User_profile from "./components/user_profile";
 import Home from "./components/Home";
 import ItemGroupBox from "./components/ItemGroupBox";
+import { Dialog } from "@material-ui/core";
+import Dialogs from './components/Dialogs'
 export function App() {
   return (
     <>
-      <ChatEngine
-        projectID="d2aae693-c3d3-4f9b-a786-94417a988839"
-        userName="test1"
-        userSecret="123"
-        renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps} />}
-      />
+       
       <BrowserRouter>
-        <Nav />
+         
         <Switch>
           <Route path="/detail/">
-            <Imgex />
-            <All />
+             
+            <Dialogs/>
           </Route>
           <Route path="/">
             <Route path="/Home" exact component={Home} />
