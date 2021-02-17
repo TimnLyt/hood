@@ -1,15 +1,16 @@
 const mongoose = require("mongoose");
+const Schema = mongoose.Schema
 
-const CreatItem = new mongoose.Schema({
+const CreatItemSchema = new mongoose.Schema({
   itemsName: String,
   numberOfItem: Number,
-  postedDate: { type: Date, default: Date.now },
+  date: { type: Date, default: Date.now },
   itemSold: Boolean,
   itemPrice: Number,
   location: String,
   keywords: [String],
 });
 
-const Create = mongoose.model("Create", CreatItem);
+const Create = mongoose.model("createItem", CreatItemSchema);
 
 module.exports = Create;
