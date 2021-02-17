@@ -19,7 +19,8 @@ export function App() {
          
         <Switch>
           <Route path="/detail/">
-             
+            <Imgex/>
+             <All/>
             <Dialogs/>
           </Route>
           <Route path="/">
