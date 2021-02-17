@@ -5,8 +5,9 @@ const CreatItem = new mongoose.Schema({
   numberOfItem: Number,
   postedDate: { type: Date, default: Date.now },
   itemSold: Boolean,
-  summary: String,
+  itemPrice: Number,
   body: String,
+  location:String,
   keywords: [String],
 });
 
