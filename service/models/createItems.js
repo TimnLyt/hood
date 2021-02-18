@@ -8,7 +8,7 @@ const CreatItemSchema = new mongoose.Schema({
   itemSold: Boolean,
   itemPrice: Number,
   location: String,
-  keywords: [String],
+ 
 });
 
 const createItem = mongoose.model("createItem", CreatItemSchema);

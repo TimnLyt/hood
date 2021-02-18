@@ -1,36 +1,28 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
 
- 
-const mockProducts = require('./mockProduct');
- 
-const Product = require('../models/mockProduct');
- 
-
-mockProducts.products.forEach((prod) => {
-    
-    Product.create(prod).catch(err => console.log(err));
-    if(error){
-        console.long("something went wrong");
-}});
- 
-
-const mockItemInfo = require('./mockItemInfo');
-
-const ItemInfo = require('../models/ItemInfo');
-
-mockItemInfo.info.forEach((info) => {
-  ItemInfo.create(info).catch(err => console.log(err));
-});
-
+const mockProducts = require("./mockProduct");
+const mockItemInfo = require("./mockItemInfo");
 const mockCreateItem = require("./mockCreateItem");
 
-const createItems = require("../models/createItems");
+const Product = require("../models/mockProduct");
+const ItemInfo = require("../models/ItemInfo");
+const createItem = require("../models/createItem");
+
+mockProducts.products.forEach((prod) => {
+  Product.create(prod).catch((err) => console.log(err));
+  if (error) {
+    console.long("something went wrong");
+  }
+});
+
+mockItemInfo.info.forEach((info) => {
+  ItemInfo.create(info).catch((err) => console.log(err));
+});
 
 mockCreateItem.items.forEach((item) => {
-  itemData.create(item).catch((err) => console.log(err));
+  createItem.create(item).catch((err) => console.log(err));
 });
- 
 
 const user = process.env.MONGO_USER;
 const password = process.env.MONGO_PASS;
