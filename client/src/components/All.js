@@ -3,14 +3,14 @@ import React from 'react';
 import './All.css'
 import {
   Card,
-  CardActionArea,
+  Grid,
   CardContent,
   makeStyles,
 } from "@material-ui/core";
 import Cont from './Cont';
  
 import User from './Userc';
-
+import FetchOneProd from './FetchOneProd'
 const useStyles = makeStyles((theme) => ({
     user: {
        
@@ -23,15 +23,15 @@ const useStyles = makeStyles((theme) => ({
   }));
   
 const All=(props)=>{
-    
+  const classes = useStyles();
     return(
         <>
         <Grid container className=
           {classes.big} xs={12}   >
         <Grid item xs={10}>
-        <FeatchProduct/>
+         <FetchOneProd/>
         </Grid>
-        <Grid item xs={2} sm={2}> 
+        <Grid item xs={1} sm={1}> 
         <User className={classes.users}  />
         </Grid>
       </Grid>
