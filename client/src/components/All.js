@@ -26,11 +26,15 @@ const All=(props)=>{
     
     return(
         <>
-        <div className='big'>
-        <Cont/>
-        <User className='user'/>
-
-        </div>
+        <Grid container className=
+          {classes.big} xs={12}   >
+        <Grid item xs={10}>
+        <FeatchProduct/>
+        </Grid>
+        <Grid item xs={2} sm={2}> 
+        <User className={classes.users}  />
+        </Grid>
+      </Grid>
         </>
     )
      
