@@ -11,6 +11,7 @@ import Home from "./components/Home";
 import ItemGroupBox from "./components/ItemGroupBox";
 import { Dialog } from "@material-ui/core";
 import Dialogs from './components/Dialogs'
+import FeatchProduct from './components/FetchOneProd'
 export function App() {
   return (
     <>
@@ -18,8 +19,8 @@ export function App() {
       <BrowserRouter>
          
         <Switch>
-          <Route path="/detail/">
-             
+          <Route exact path="/detail/:id">
+             <All/>
             <Dialogs/>
           </Route>
           <Route path="/">
