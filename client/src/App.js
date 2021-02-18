@@ -21,11 +21,11 @@ export function App() {
       <BrowserRouter>
          
         <Switch>
+ 
           <Route  path='/detail/:id'>
           <Imgex/>
           <FetchOneProd/>
           <User/>
-          
           </Route>
           <Route path="/">
             <Route path="/Home" exact component={Home} />
