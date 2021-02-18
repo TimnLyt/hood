@@ -10,12 +10,12 @@ require("dotenv").config({ path: '../.env'});
 const detailRouter = require("./routes/detailRouter");
 const messageRouter = require('./routes/messageRoute')
 
- const navRouter = require('./navRouter');
- const userRouter = require('./userRouter');
+ const navRouter = require('./routes/navRouter');
+ const userRouter = require('./routes/userRouter');
 
 const user = process.env.MONGO_USER;
 const password = process.env.MONGO_PASS;
-const mongoDB = `mongodb+srv://${user}:${password}@cluster0.k6vfw.mongodb.net/MockOfferUP?retryWrites=true&w=majority`;
+const mongoDB = `mongodb+srv://${user}:${password}@cluster0.k6vfw.mongodb.net/MockOfferUp?retryWrites=true&w=majority`;
  
 mongoose
   .connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true })
