@@ -46,17 +46,18 @@ export default function User(props) {
       <CardActionArea>
         <CardContent>
           <h3>User</h3>
+          <div>
           <Button className={classes.button}
           variant="contained" color="secondary">
               Offer
               </Button>
+              </div>
+              <div> 
             <Button className={classes.button}
                 variant="contained" color="secondary">
                 Question
               </Button>
-              <Button>
-            <Link to='/'$>D </Link>
-            </Button>
+              </div>
            
         </CardContent>
       </CardActionArea>
