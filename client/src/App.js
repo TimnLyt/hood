@@ -10,22 +10,19 @@ import User_profile from "./components/user_profile";
 import Home from "./components/Home";
 import ItemGroupBox from "./components/ItemGroupBox";
 import { Dialog } from "@material-ui/core";
-import Dialogs from './components/Dialogs'
-import FeatchProduct from './components/FetchOneProd'
-import FetchOneProd from './components/FetchOneProd'
-import User from './components/Userc'
+import Dialogs from "./components/Dialogs";
+import FeatchProduct from "./components/FetchOneProd";
+import FetchOneProd from "./components/FetchOneProd";
+import User from "./components/Userc";
 export function App() {
   return (
     <>
-       
       <BrowserRouter>
-         
         <Switch>
- 
-          <Route  path='/detail/:id'>
-          <Imgex/>
-          <FetchOneProd/>
-          <User/>
+          <Route path="/detail/:id">
+            <Imgex />
+            <FetchOneProd />
+            <User />
           </Route>
           <Route path="/">
             <Route path="/Home" exact component={Home} />
