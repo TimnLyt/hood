@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { className,TextField, classes,makeStyles,Grid, Button}from "@material-ui/core";
 import axios from "axios"
 //import "../app.css";
-//import { db } from "../firebase";
+import {Redirect} from 'react-router-dom'
+import {withAuthenticationRequired} from '@auth0/auth0-react'
 const useStyles = makeStyles(theme => ({
   root:{
       height:300,
@@ -19,6 +20,7 @@ function Dialogs() {
   const[input, setInput]=useState({
     content:""
   })
+  const [success,setSuccess]=useState(false)
    
    
   function handleChange(event){
@@ -67,4 +69,6 @@ function Dialogs() {
   
 }
 
-export default Dialogs;
+export default withAuthenticationRequired(Dialogs,{
+  returnTo:()=>`/detail/:id`,
+});
