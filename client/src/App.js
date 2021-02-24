@@ -25,6 +25,7 @@ export function App() {
             <User />
           </Route>
           <Route path="/">
+            <Nav />
             <Route path="/Home" exact component={Home} />
             <Route Path="/User_profile" component={User_profile} />
           </Route>
