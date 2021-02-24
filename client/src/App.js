@@ -9,26 +9,40 @@ import User_profile from "./components/user_profile";
 import Home from "./components/Home";
 import ItemGroupBox from "./components/ItemGroupBox";
 import Chat from "./Chat";
+import { Dialog } from "@material-ui/core";
+import Dialogs from "./components/Dialogs";
+import FeatchProduct from "./components/FetchOneProd";
+import FetchOneProd from "./components/FetchOneProd";
+import { Auth0Provider } from "@auth0/auth0-react";
+import User from "./components/Userc";
 
 export function App() {
   return (
     <>
       <BrowserRouter>
-        <Nav />
-        <Switch>
-          <Route path="/detail/">
-            <Imgex />
-            <All />
-          </Route>
+        <Auth0Provider
+          domain={process.env.REACT_APP_AUTH_0_DOMAIN}
+          clientId={process.env.REATC_APP_AUTH_0_CLIENT_ID}
+          redirectUri={window.location.origin}
+        >
+          <Switch>
+            <Route path="/detail/:id">
+              <Imgex />
+              <FetchOneProd />
+              <User />
+            </Route>
+            <Route path="/">
+              <Nav />
+              <Route path="/Home" exact component={Home} />
+              <Route Path="/User_profile" component={User_profile} />
+              <Route path="/Chat" component={Chat} />
+            </Route>
+            <Route Path="/ItemGroupBox" component={ItemGroupBox} />
 
-          <Route path="/">
-            <Route path="/Home" exact component={Home} />
-            <Route path="/User_profile" component={User_profile} />
-            <Route path="/Chat" component={Chat} />
-          </Route>
-
-          <Route path="/ItemGroupBox" component={ItemGroupBox} />
-        </Switch>
+            <Route></Route>
+            <Route></Route>
+          </Switch>
+        </Auth0Provider>
       </BrowserRouter>
     </>
   );

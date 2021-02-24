@@ -1,15 +1,27 @@
 const express = require("express");
 const app = express();
 const port = 5000;
+//const cors = require('cors');
 
+ 
 const mongoose = require("mongoose");
-require("dotenv").config();
+//require("dotenv").config({ path: '../.env'});
+require('dotenv').config();
+const detailRouter = require("./routes/detailRouter");
+const messageRouter = require('./routes/messageRoute')
 
-const detailRouter = require("./detailRouter");
 
+ const navRouter = require('./routes/navRouter');
+ const userRouter = require('./routes/userRouter');
+ 
+ const itemRouter = require('./routes/itemRouter')
+ const createItemsRouter = require('./routes/createItemsRouter')
+
+ 
 const user = process.env.MONGO_USER;
 const password = process.env.MONGO_PASS;
-const mongoDB = `mongodb+srv://${user}:${password}@cluster0.k6vfw.mongodb.net/<dbname>?retryWrites=true&w=majority`;
+const mongoDB = `mongodb+srv://${user}:${password}@cluster0.k6vfw.mongodb.net/MockOfferUp?retryWrites=true&w=majority`;
+ 
 mongoose
   .connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(
@@ -23,13 +35,22 @@ mongoose
 
 // Retain an instance of the connection so that we can log errors
 const db = mongoose.connection;
-console.log("mongo Connected");
+
 db.on("error", () => console.log("MongoDB connection error:"));
 db.on("close", () => {
   console.log("MongoDB connection closed");
 });
+app.use(express.json())
+//app.use(cors());
 
 app.use("/v1/detail", detailRouter);
+app.use('/v1/details',messageRouter);
+app.use("/v1/item", itemRouter);
+app.use('/v1/nav', navRouter);
+app.use('/v1/user', userRouter);
+app.use("/v1/ceate", createItemsRouter);
+
+ 
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
