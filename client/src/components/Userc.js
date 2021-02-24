@@ -1,6 +1,5 @@
  
-import React from "react";
- 
+import React, { useState } from "react";
 import {
   Card,
   CardActionArea,
@@ -8,15 +7,16 @@ import {
   makeStyles,
   Badge,
   Button,
+  ButtonGroup,
   
 } from "@material-ui/core";
 import { Link } from 'react-router-dom';
 import { blueGrey } from "@material-ui/core/colors";
-
+import Dialogs from './Dialogs'
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: theme.spacing(1),
-    height:200,
+    height:120,
     width:200,
     marginLeft: 1300,
     marginTop:0,
@@ -32,36 +32,44 @@ const useStyles = makeStyles((theme) => ({
   },
   button:{
     height:28,
-    marginTop:10
+     
   }
 }));
 
 export default function User(props) {
+  const [contact, setcontact]=useState(false);
   const classes = useStyles();
   return (
+    <>
     <Card className={classes.root}>
+       
        <div className={classes.pic} >
          
        </div>
       <CardActionArea>
         <CardContent>
           <h3>User</h3>
-          <div>
-          <Button className={classes.button}
+          
+          <ButtonGroup className={classes.button}
           variant="contained" color="secondary">
+            <Button>
               Offer
               </Button>
-              </div>
-              <div> 
+              
             <Button className={classes.button}
-                variant="contained" color="secondary">
+                variant="contained" color="secondary"
+                onClick={()=>setcontact(!contact)}>
                 Question
-              </Button>
-              </div>
+                </Button>
+              </ButtonGroup>
+               
            
         </CardContent>
       </CardActionArea>
     </Card>
+    {
+          contact?<Dialogs/>:null
+           }
+    </>
   );
 }
- 
