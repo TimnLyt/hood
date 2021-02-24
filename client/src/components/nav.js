@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import './nav.css';
 import { Link } from 'react-router-dom';
+import {
+    Button,
+} from '@material-ui/core';
+import AuthButtonGroup from '../Auth0/AuthButtonGroup';
 
 
 class Nav extends Component {
@@ -35,8 +39,7 @@ class Nav extends Component {
                     <ul class="nav_links">
                         <li><a href="#">Sell</a> </li>
                         <li><a href="#">About</a> </li>
-                        <li><a href="#">Log in</a> </li>
-                        <li><a href="#">Sign up</a> </li>
+                        <AuthButtonGroup />
                     </ul>    
                 </nav>    
             </header>
