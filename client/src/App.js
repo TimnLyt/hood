@@ -31,7 +31,8 @@ export function App() {
             <User />
           </Route>
           <Route path="/">
-            <Route path="/Home"  component={Home} />
+            <Nav />
+            <Route path="/Home" exact component={Home} />
             <Route Path="/User_profile" component={User_profile} />
           </Route>
           <Route Path="/ItemGroupBox" component={ItemGroupBox} />
