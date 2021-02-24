@@ -14,11 +14,17 @@ import Dialogs from "./components/Dialogs";
 import FeatchProduct from "./components/FetchOneProd";
 import FetchOneProd from "./components/FetchOneProd";
 import User from "./components/Userc";
+import NavBar from "./components/nav-bar"
+import authentication from "./Auth0/auth0-provider-with-history"
+ 
 export function App() {
+   
   return (
     <>
       <BrowserRouter>
+      <Nav/>
         <Switch>
+           
           <Route path="/detail/:id">
             <Imgex />
             <FetchOneProd />

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './nav.css';
 import { Link } from 'react-router-dom';
-
-
+import AuthenticationButton from "./authentication-button";
+import AuthNav from "./Auth-nav"
 class Nav extends Component {
     constructor() {
         super();
@@ -35,9 +35,9 @@ class Nav extends Component {
                     <ul class="nav_links">
                         <li><a href="#">Sell</a> </li>
                         <li><a href="#">About</a> </li>
-                        <li><a href="#">Log in</a> </li>
-                        <li><a href="#">Sign up</a> </li>
-                    </ul>    
+                         <AuthNav/>
+                    </ul>
+                      
                 </nav>    
             </header>
         );
