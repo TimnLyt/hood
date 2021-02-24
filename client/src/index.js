@@ -12,7 +12,14 @@ import { CssBaseline,ThemeProvider,createMuiTheme } from '@material-ui/core';
 
 ReactDOM.render(
   <React.StrictMode>
+     
+     
+    <BrowserRouter> 
+    <Auth0ProviderWithHistory> 
     <App />
+    </Auth0ProviderWithHistory>
+    </BrowserRouter>
+    
   </React.StrictMode>,
   document.getElementById('root')
 );
