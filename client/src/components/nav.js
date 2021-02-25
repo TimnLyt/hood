@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './nav.css';
 import { Link } from 'react-router-dom';
 import AuthenticationButton from "../Auth0/AuthButtonGroup";
-import AuthNav from "./Auth-nav"
+ 
 class Nav extends Component {
     constructor() {
         super();
