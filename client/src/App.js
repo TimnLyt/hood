@@ -33,6 +33,8 @@ export function App() {
             </Route>
             <Route path="/">
               <Nav />
+
+              {/* put your path here, edit navbar + this to get your comps on the navbar */}
               <Route path="/Home" exact component={Home} />
               <Route Path="/User_profile" component={User_profile} />
               <Route path="/Chat" component={Chat} />
