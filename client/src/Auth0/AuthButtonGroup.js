@@ -7,9 +7,9 @@ export default function AuthButtonGroup(){
   const { isAuthenticated } = useAuth0();
   if (isAuthenticated) {
     return <Logout />;
-  }else{
+   }else{
     return <LoginSignup />;
-  }
+   }
 };
 
  
