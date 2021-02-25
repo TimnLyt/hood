@@ -1,21 +1,31 @@
 import React from "react";
+import { Button,makeStyles } from '@material-ui/core';
 import { useAuth0 } from "@auth0/auth0-react";
 
-const LogoutButton = () => {
+const useStyles = makeStyles((theme) => ({
+    navOption: {
+        margin: theme.spacing(2),
+    },
+}));
+
+export default function Logout () {
   const { logout } = useAuth0();
+  const classes = useStyles();
   return (
-    <button
-      className="btn btn-danger btn-block"
-      onClick={() =>
+    <Button
+        className = {classes.navOption}
+        variant = "outlined"
+        color = "inherit"
+        onClick={() =>
         logout({
           returnTo: window.location.origin,
         })
       }
     >
       Log Out
-    </button>
+    </Button>
     
   );
 };
 
-export default LogoutButton;
+ 
