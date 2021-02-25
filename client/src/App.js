@@ -17,35 +17,45 @@ import FetchOneProd from "./components/FetchOneProd";
 import { Auth0Provider } from "@auth0/auth0-react";
 import User from "./components/Userc";
 export function App() {
-   
   return (
-    <>
-      <BrowserRouter>
-
+    <BrowserRouter>
+      <Auth0Provider
+        domain={process.env.REACT_APP_AUTH_0_DOMAIN}
+        clientId={process.env.REATC_APP_AUTH_0_CLIENT_ID}
+        redirectUri={window.location.origin}
+      >
+        <Nav />
+        <Switch>
+          <Route exact path="/detail/:id">
+            <Imgex />
+            <FetchOneProd />
+            <User />
+          </Route>
+          
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/ItemGroupBox">
+            <ItemGroupBox />
+          </Route>
+          
          
-          <Switch>
-            <Route path="/detail/:id">
-              <Imgex />
-              <FetchOneProd />
-              <User />
-            </Route>
-            <Route path="/">
-              <Nav />
+          <Route exact path="/User_profile">
+            <User_profile />
+          </Route>
+         
 
-              {/* put your path here, edit navbar + this to get your comps on the navbar */}
-              <Route path="/Home" exact component={Home} />
-              <Route Path="/User_profile" component={User_profile} />
-              <Route path="/Chat" component={Chat} />
-            </Route>
-            <Route Path="/ItemGroupBox" component={ItemGroupBox} />
-
-            <Route></Route>
-            <Route></Route>
-          </Switch>
-        
-
-      </BrowserRouter>
-    </>
+          <Route exact path="/Chat">
+            <Chat />
+          </Route>
+         
+         
+           
+            
+         
+        </Switch>
+      </Auth0Provider>
+    </BrowserRouter>
   );
 }
 
