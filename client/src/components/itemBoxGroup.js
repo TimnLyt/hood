@@ -1,5 +1,5 @@
 import React from 'react';
-import ItemBox from './itemBox';
+import ItemBox from './ItemBox';
 import './ItemBoxGroup.css';
 
 export default function ItemBoxGroup(){
