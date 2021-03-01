@@ -1,7 +1,7 @@
 import React from 'react';
 import './ItemBox.css';
 import { Link } from "react-router-dom";
-//import { Link } from 'react-router-dom';
+import { Button } from "@material-ui/core";
 
 export default function ItemBox(){
     return (
@@ -14,8 +14,7 @@ export default function ItemBox(){
             <li>$$ Price</li>
             <li>Item Location</li>
             <li></li>
-            <Button className={classes.button}
-                variant="contained" color="secondary">
+            <Button variant="contained" color="secondary">
             <Link to='/detail'>Details</Link>
             </Button>
             </ul>
