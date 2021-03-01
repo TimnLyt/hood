@@ -10,27 +10,19 @@ class Nav extends Component {
             nav: []
         }
     }
-    
-    componentDidMount() {
-        fetch('api/nav')
-            .then(res => res.json())
-            .then(nav => this.setState({nav}, 
-            () => console.log('Nav fetched..', 
-            nav)));
-    }
 
     render() {
         return (
             <header>
                 <h2>OfferUp</h2>
-                    <div class="search-box">
-                        <input class="search-txt" type="text" name="" placeholder="Search OfferUp"></input>
-                        <a class="search-btn" href="#">
+                    <div className="search-box">
+                        <input className="search-txt" type="text" name="" placeholder="Search OfferUp"></input>
+                        <a className="search-btn" href="#">
                         <p>Go</p>
                         </a>
                     </div>  
                 <nav>
-                    <ul class="nav_links">
+                    <ul className="nav_links">
                         <li><a href="#">Sell</a> </li>
                         <li><a href="#">About</a> </li>
                         <li><a href="#">Log in</a> </li>

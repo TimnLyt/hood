@@ -13,7 +13,7 @@ function App() {
       <ItemInfo />
       <Map />
       
-    <ItemBoxGroup></ItemBoxGroup>
+      <ItemBoxGroup></ItemBoxGroup>
     </>
   );
 }
