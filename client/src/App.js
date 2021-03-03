@@ -8,7 +8,7 @@ import Nav from "./components/nav";
 import User_profile from "./components/user_profile";
 import Home from "./components/Home";
 import ItemGroupBox from "./components/ItemGroupBox";
-import Chat from ".components/Chat";
+//import Chat from "./Chat";
 import { Dialog } from "@material-ui/core";
 import Dialogs from "./components/Dialogs";
 import FeatchProduct from "./components/FetchOneProd";
@@ -22,29 +22,19 @@ export function App() {
       <BrowserRouter>
         <Nav/>
           <Switch>
-            
+          <Route exact path="/"><ItemGroupBox/>
+               </Route>
             <Route exact path="/detail/:id">
               <Imgex />
               <FetchOneProd />
               <User />
             </Route>
-            <Route path="/Home"> <Home/></Route>
+            <Route exact path="/Home"> <Home/></Route>
             <Route exact Path="/User_profile"> <User_profile/></Route>
 
-            <Route path="/">
-               
 
-              {/* put your path here, edit navbar + this to get your comps on the navbar */}
-               
-              <Route Path="/User_profile" component={User_profile} />
-              <Route exact path="/Chat" component={Chat} />
-            </Route>
              
-
-            <Route exact path="/">
-            <ItemGroupBox/>
-               </Route>
-            <Route></Route>
+            
           </Switch>
         
       </BrowserRouter>
