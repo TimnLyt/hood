@@ -24,17 +24,19 @@ export function App() {
           <Switch>
           <Route exact path="/"><ItemGroupBox/>
                </Route>
-            <Route exact path="/detail/:id">
-              <Imgex />
+            <Route exact path="/detail/:id">               
+             <Imgex />
               <FetchOneProd />
               <User />
             </Route>
+ 
             <Route exact path="/Home"> <Home/></Route>
             <Route exact Path="/User_profile"> <User_profile/></Route>
             <Route exact Path="/chat"> <Chat/></Route>
 
              
             
+ 
           </Switch>
         
       </BrowserRouter>

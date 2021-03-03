@@ -3,7 +3,7 @@ const app = express();
 const port = 5000;
 const cors = require('cors');
 const helmet = require("helmet");
- 
+
 const mongoose = require("mongoose");
 //require("dotenv").config({ path: '../.env'});
 require('dotenv').config();
@@ -21,7 +21,7 @@ const messageRouter = require('./routes/messageRoute')
 const user = process.env.MONGO_USER;
 const password = process.env.MONGO_PASS;
 const mongoDB = `mongodb+srv://${user}:${password}@cluster0.k6vfw.mongodb.net/MockOfferUp?retryWrites=true&w=majority`;
-
+ 
 mongoose
   .connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(
@@ -42,7 +42,7 @@ db.on("close", () => {
 });
 app.use(express.json())
 app.use(cors());
-app.use(helmet());
+
 app.use("/v1/detail", detailRouter);
 app.use('/v1/details',messageRouter);
 app.use("/v1/item", itemRouter);

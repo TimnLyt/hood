@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import './nav.css';
 import { Link } from 'react-router-dom';
-import AuthenticationButton from "../Auth0/AuthButtonGroup";
- 
+import {
+    Button,
+} from '@material-ui/core';
+import AuthButtonGroup from '../Auth0/AuthButtonGroup';
+
+
 class Nav extends Component {
     constructor() {
         super();
@@ -35,9 +39,8 @@ class Nav extends Component {
                     <ul class="nav_links">
                         <li><a href="#">Sell</a> </li>
                         <li><a href="#">About</a> </li>
-                         <AuthenticationButton/>
-                    </ul>
-                      
+                        <AuthButtonGroup />
+                    </ul>    
                 </nav>    
             </header>
         );

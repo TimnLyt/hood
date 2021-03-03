@@ -6,6 +6,7 @@ import Auth0ProviderWithHistory from "../src/Auth0/auth0-provider-with-history";
 import { CssBaseline,ThemeProvider,createMuiTheme } from '@material-ui/core';
 import './index.css';
 import App from './App';
+ 
 import reportWebVitals from './reportWebVitals';
  
 
@@ -20,7 +21,7 @@ ReactDOM.render(
     </BrowserRouter>
     
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -81,5 +81,5 @@ function Dialogs() {
 }
 
 export default withAuthenticationRequired(Dialogs,{
-  returnTo:()=>`/detail/+:id`,
+  returnTo:()=>`/detail/:id`,
 });
