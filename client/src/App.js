@@ -1,7 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { ChatEngine } from "react-chat-engine";
-import ChatFeed from "./components/ChatFeed";
+
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import All from "./components/All";
 import Imgex from "./components/Imgex";
@@ -9,36 +8,45 @@ import Nav from "./components/nav";
 import User_profile from "./components/user_profile";
 import Home from "./components/Home";
 import ItemGroupBox from "./components/ItemGroupBox";
+import Chat from ".components/Chat";
 import { Dialog } from "@material-ui/core";
 import Dialogs from "./components/Dialogs";
 import FeatchProduct from "./components/FetchOneProd";
 import FetchOneProd from "./components/FetchOneProd";
+import { Auth0Provider } from "@auth0/auth0-react";
 import User from "./components/Userc";
-import NavBar from "./components/nav-bar"
-import authentication from "./Auth0/auth0-provider-with-history"
- 
 export function App() {
    
   return (
     <>
       <BrowserRouter>
-      <Nav/>
-        <Switch>
-           
-          <Route path="/detail/:id">
-            <Imgex />
-            <FetchOneProd />
-            <User />
-          </Route>
-          <Route path="/">
-            <Route path="/Home" exact component={Home} />
-            <Route Path="/User_profile" component={User_profile} />
-          </Route>
-          <Route Path="/ItemGroupBox" component={ItemGroupBox} />
+        <Nav/>
+          <Switch>
+            
+            <Route exact path="/detail/:id">
+              <Imgex />
+              <FetchOneProd />
+              <User />
+            </Route>
+            <Route path="/Home"> <Home/></Route>
+            <Route exact Path="/User_profile"> <User_profile/></Route>
 
-          <Route></Route>
-          <Route></Route>
-        </Switch>
+            <Route path="/">
+               
+
+              {/* put your path here, edit navbar + this to get your comps on the navbar */}
+               
+              <Route Path="/User_profile" component={User_profile} />
+              <Route exact path="/Chat" component={Chat} />
+            </Route>
+             
+
+            <Route exact path="/">
+            <ItemGroupBox/>
+               </Route>
+            <Route></Route>
+          </Switch>
+        
       </BrowserRouter>
     </>
   );
