@@ -21,27 +21,38 @@ function Dialogs() {
     content:""
   })
   const [success,setSuccess]=useState(false)
-   
-   
-  function handleChange(event){
-     const{name, value}=event.target;
+  
+  const handleChanges=(event)=>{
+    const {name,value}=event.target;
+    setInput({
+      ...input,
+      [name]:value,
+    });
+    console.log(input);
+  };
 
-     setInput(prevInput=>{
-       return{
-         ...prevInput,
-            [name]:value
-       }
-     })
-  }
-  function handleClick(event){
+  const HandleSubmits=(event)=>{
     event.preventDefault();
-    console.log(input)
-    const newMessage={
-      content:input.content
-    }
-     axios.post('http://localhost:5000/v1/details',newMessage)
-  }
-
+    const requestConfig={
+      url:'http://localhost:5000/v1/details',
+      method:'post',
+      header:{'Content-Type': 'application/jason'},
+      data:{
+        content:input.content
+      },
+    };
+    axios(requestConfig)
+    .then((response)=>{
+      setSuccess(true)
+      console.log(`message sent ${response.data}`);
+    })
+     .catch((err)=>{
+       console.log(`we should really handle the error:
+       ${err}`);
+     });
+  };
+   
+   
   const classes = useStyles();
    
   return <Grid container direction='column'  
@@ -51,7 +62,7 @@ function Dialogs() {
    
    <TextField className={classes.text}
           //id="standard-multiline-static"
-          onChange={handleChange}
+          onChange={handleChanges}
           label="Message"
           multiline
           rows={13}
@@ -63,7 +74,7 @@ function Dialogs() {
         
   </form>
   <Grid item>
-          <Button onClick={handleClick}>Submit</Button>
+          <Button onClick={HandleSubmits}>Submit</Button>
         </Grid>
   </Grid>
   
