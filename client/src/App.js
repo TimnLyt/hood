@@ -21,26 +21,22 @@ export function App() {
   return (
     <>
       <BrowserRouter>
-         
+        <Nav/>
           <Switch>
-            <Route path="/detail/:id">
-              <Imgex />
+          <Route exact path="/"><ItemGroupBox/>
+               </Route>
+            <Route exact path="/detail/:id">               
+             <Imgex />
               <FetchOneProd />
               <User />
             </Route>
+ 
             <Route exact path="/profile"><Profile/></Route>
-            <Route path="/">
-              <Nav />
-
-              {/* put your path here, edit navbar + this to get your comps on the navbar */}
-              <Route path="/Home" exact component={Home} />
-              <Route Path="/User_profile" component={User_profile} />
-              <Route path="/Chat" component={Chat} />
-            </Route>
-            <Route Path="/ItemGroupBox" component={ItemGroupBox} />
-
-            <Route></Route>
-            <Route></Route>
+            <Route exact path="/Home"> <Home/></Route>
+            <Route exact Path="/User_profile"> <User_profile/></Route>
+            <Route exact Path="/chat"> <Chat/></Route>
+                  
+ 
           </Switch>
         
       </BrowserRouter>
