@@ -31,28 +31,21 @@ export function App() {
             <FetchOneProd />
             <User />
           </Route>
-          
+
           <Route exact path="/">
             <Home />
           </Route>
           <Route exact path="/ItemGroupBox">
             <ItemGroupBox />
           </Route>
-          
-         
+
           <Route exact path="/User_profile">
             <User_profile />
           </Route>
-         
 
           <Route exact path="/Chat">
             <Chat />
           </Route>
-         
-         
-           
-            
-         
         </Switch>
       </Auth0Provider>
     </BrowserRouter>

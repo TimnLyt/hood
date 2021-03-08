@@ -48,7 +48,7 @@ app.use('/v1/details',messageRouter);
 app.use("/v1/item", itemRouter);
 app.use('/v1/nav', navRouter);
 app.use('/v1/user', userRouter);
-app.use("/v1/ceate", createItemsRouter);
+app.use("/v1/create", createItemsRouter);
 
  
 
