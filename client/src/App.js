@@ -15,6 +15,7 @@ import FeatchProduct from "./components/FetchOneProd";
 import FetchOneProd from "./components/FetchOneProd";
 import { Auth0Provider } from "@auth0/auth0-react";
 import User from "./components/Userc";
+import Profile from './components/Profile'
 export function App() {
    
   return (
@@ -27,7 +28,7 @@ export function App() {
               <FetchOneProd />
               <User />
             </Route>
-            
+            <Route exact path="/profile"><Profile/></Route>
             <Route path="/">
               <Nav />
 
