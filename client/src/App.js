@@ -18,44 +18,31 @@ import { Auth0Provider } from "@auth0/auth0-react";
 import User from "./components/Userc";
 export function App() {
   return (
-    <BrowserRouter>
-      <Auth0Provider
-        domain={process.env.REACT_APP_AUTH_0_DOMAIN}
-        clientId={process.env.REATC_APP_AUTH_0_CLIENT_ID}
-        redirectUri={window.location.origin}
-      >
-        <Nav />
-        <Switch>
-          <Route exact path="/detail/:id">
-            <Imgex />
-            <FetchOneProd />
-            <User />
-          </Route>
-          
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/ItemGroupBox">
-            <ItemGroupBox />
-          </Route>
-          
-         
-          <Route exact path="/User_profile">
-            <User_profile />
-          </Route>
-         
+ 
+    <>
+      <BrowserRouter>
+        <Nav/>
+          <Switch>
+          <Route exact path="/"><ItemGroupBox/>
+               </Route>
+            <Route exact path="/detail/:id">               
+             <Imgex />
+              <FetchOneProd />
+              <User />
+            </Route>
+ 
+            <Route exact path="/Home"> <Home/></Route>
+            <Route exact Path="/User_profile"> <User_profile/></Route>
+            <Route exact Path="/chat"> <Chat/></Route>
 
-          <Route exact path="/Chat">
-            <Chat />
-          </Route>
-         
-         
-           
+             
             
-         
-        </Switch>
-      </Auth0Provider>
-    </BrowserRouter>
+ 
+          </Switch>
+        
+      </BrowserRouter>
+    </>
+ 
   );
 }
 
