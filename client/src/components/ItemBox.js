@@ -1,24 +1,50 @@
 import React from 'react';
-import './ItemBox.css';
 import { Link } from "react-router-dom";
-import { Button } from "@material-ui/core";
+import { makeStyles,
+         Button,
+         Card,
+         CardActionArea,
+         CardActions,
+         CardContent,
+         CardMedia,
+         Typography } from "@material-ui/core";
+
+const useStyles = makeStyles({
+    root:{
+        maxWdith: 345,
+    },
+});
 
 export default function ItemBox(){
+    const classes = useStyles();
     return (
-       
-        <div className = "box">
-            
-            <ul class="details">
-            <li>Picture of Item</li>
-            <li>Item Discription</li>
-            <li>$$ Price</li>
-            <li>Item Location</li>
-            <li></li>
-            <Button variant="contained" color="secondary">
-            <Link to='/detail'>Details</Link>
-            </Button>
-            </ul>
-        </div>
-      
-    )
+            <Card className={classes.root}>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  alt="img"
+                />
+                <CardContent>
+                  <Typography variant="h5">
+                    Item
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary" component="p">
+                    price
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary" component="p">
+                    description
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary" component="p">
+                    location
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button component ={Link} to ="/detail" size="small" color="primary">
+                  Detail
+                </Button>
+
+              </CardActions>
+            </Card>
+    );
 }
