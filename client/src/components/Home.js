@@ -1,6 +1,7 @@
  import React from "react"
  import './Home.css';
  import HomePageImg from "./HomePageImg"
+ import ItemGroupBox from "./ItemGroupBox"
  
  export default function Home (props){
  
@@ -9,10 +10,7 @@
         <div className ="wrapper"> 
         
         
-        <HomePageImg/>
-        <HomePageImg/>
-        <HomePageImg/>
-        <HomePageImg/>
+        <ItemGroupBox></ItemGroupBox>
         
          </div>
         )
