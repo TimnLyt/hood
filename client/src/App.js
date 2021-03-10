@@ -16,6 +16,7 @@ import FetchOneProd from "./components/FetchOneProd";
 
 import { Auth0Provider } from "@auth0/auth0-react";
 import User from "./components/Userc";
+import CreatProduct from './components/CreatProduct'
 export function App() {
   return (
  
@@ -25,6 +26,8 @@ export function App() {
           <Switch>
           <Route exact path="/"><ItemGroupBox/>
                </Route>
+
+            <Route exact path="/sell"> <CreatProduct/></Route>
             <Route exact path="/detail/:id">               
              <Imgex />
               <FetchOneProd />
