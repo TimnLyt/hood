@@ -6,7 +6,7 @@ const ProductPostSchema = new mongoose.Schema({
   discription: { type: String, required: false },
   selling:{ type: Boolean, required: true },
   date: { type: Date,default: Date.now, required: true },
-  image: String,
+  image: { type: String, required: true },
   condition:{ type: String, required: false }
 });
 
