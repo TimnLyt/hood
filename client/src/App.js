@@ -7,7 +7,7 @@ import Imgex from "./components/Imgex";
 import Nav from "./components/nav";
 import User_profile from "./components/user_profile";
 import Home from "./components/Home";
-import ItemGroupBox from "./components/ItemGroupBox";
+//import ItemGroupBox from "./components/ItemGroupBox.js";
 import Chat from "./Chat";
 import { Dialog } from "@material-ui/core";
 import Dialogs from "./components/Dialogs";
@@ -18,6 +18,7 @@ import { Auth0Provider } from "@auth0/auth0-react";
 import User from "./components/Userc";
 import CreatProduct from './components/CreatProduct'
 import Profile from './components/Profile'
+// import ItemView from "./components/ItemView";
 export function App() {
   return (
  
@@ -25,21 +26,19 @@ export function App() {
       <BrowserRouter>
         <Nav/>
           <Switch>
-          <Route exact path="/"><ItemGroupBox/>
-               </Route>
-
-            <Route exact path="/sell"> <CreatProduct/></Route>
+          <Route exact path="/sell"> <CreatProduct/></Route>
+          <Route exact path="/"> <Home/></Route>            
             <Route exact path="/detail/:id">               
              <Imgex />
               <FetchOneProd />
               <User />
             </Route>
  
-            <Route exact path="/profile"><Profile/></Route>
-            <Route exact path="/Home"> <Home/></Route>
+
             <Route exact Path="/User_profile"> <User_profile/></Route>
             <Route exact Path="/chat"> <Chat/></Route>
-                  
+             
+            
  
           </Switch>
         
