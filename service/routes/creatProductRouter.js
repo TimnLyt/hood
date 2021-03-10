@@ -3,14 +3,9 @@ const dateFns = require('date-fns');
 const creatProductRouter = express.Router();
 
 const ProductPost = require("../models/ProductPost");
-
+//save product posts to databse
 creatProductRouter.route("/").post((req, res) => {
-   // const dateTime=req.body.date;
-    //const newDate = dateFns.parse(
-      //  dateTime,
-       // 'yyyy-MM-dd HH:mm XX',
-       // new Date(),
-//);
+    
     const title = req.body.title;
     const price = req.body.price;
     const discription = req.body.discription;
@@ -25,6 +20,8 @@ creatProductRouter.route("/").post((req, res) => {
     });
     newProduct.save();
   })
+
+  //get product pased on params
   creatProductRouter
   .route('/:id')
   .get((req, res, next) => {
