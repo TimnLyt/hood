@@ -21,7 +21,6 @@ import Profile from './components/Profile'
 // import ItemView from "./components/ItemView";
 export function App() {
   return (
- 
     <>
       <BrowserRouter>
         <Nav/>
@@ -44,7 +43,6 @@ export function App() {
         
       </BrowserRouter>
     </>
- 
   );
 }
 
