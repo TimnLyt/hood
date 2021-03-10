@@ -1,19 +1,13 @@
  import React from "react"
  import './Home.css';
- import HomePageImg from "./HomePageImg"
+ import ItemProvider from "./ItemProvider";
  
  export default function Home (props){
  
         return (
 
         <div className ="wrapper"> 
-        
-        
-        <HomePageImg/>
-        <HomePageImg/>
-        <HomePageImg/>
-        <HomePageImg/>
-        
+         <ItemProvider></ItemProvider>
          </div>
         )
 }
