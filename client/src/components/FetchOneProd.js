@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
 export default function FeatchProduct(props) {
 const classes = useStyles();
  const { id } = useParams();   
- const url = `http://localhost:5000/v1/detail/${id}`
+ const url = `http://localhost:5000/v1/sell/${id}`
   
   const [Products, setProducts]= useState([]);
 //const [error,setError]=useState(null)
@@ -36,7 +36,7 @@ const classes = useStyles();
          setProducts(res.data)
      })
        
-}, []);
+}, [url]);
     
     if(!Products){
         return <div>No product with this id</div>
