@@ -5,9 +5,11 @@ import {
     Button,
 } from '@material-ui/core';
 import AuthButtonGroup from '../Auth0/AuthButtonGroup';
+import Profile from './Profile'
 
 
 class Nav extends Component {
+     
     constructor() {
         super();
         this.state = {
@@ -22,7 +24,7 @@ class Nav extends Component {
             () => console.log('Nav fetched..', 
             nav)));
     }
-
+     
     render() {
         return (
             <header>
@@ -39,8 +41,11 @@ class Nav extends Component {
                     <ul class="nav_links">
                         <li><Link to ='/sell'>Sell</Link> </li>
                         <li><a href="#">About</a> </li>
-
+                        <li><Link to ='/profile'>Profile</Link></li>
                         <AuthButtonGroup />
+                         
+                            
+                         
                     </ul>    
                 </nav>    
             </header>
