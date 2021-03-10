@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { withAuthenticationRequired, useAuth0 } from '@auth0/auth0-react';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import axios from 'axios'
@@ -22,7 +23,7 @@ const validationRules = yup.object({
     //condition: yup
      // .string('condition')
      // .oneOf(['New', 'Used', 'Other'], 'Must be a valid condition input')
-     // .required('Game master required'),
+     // .required('Condition required'),
      
   });
 
@@ -53,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
  
  
 
-export default function CreatProduct() {
+ function CreatProduct() {
   const classes = useStyles();
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(null);
@@ -186,4 +187,8 @@ return (
        
     </Card>
 )
-}
+ 
+};
+export default withAuthenticationRequired(CreatProduct, {
+    returnTo: () => '/sell',
+});
