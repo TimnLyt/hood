@@ -2,15 +2,15 @@ const express = require("express");
 const app = express();
 const port = 5000;
 const cors = require('cors');
-const helmet = require("helmet");
+//const helmet = require("helmet");
 
 const mongoose = require("mongoose");
 //require("dotenv").config({ path: '../.env'});
 require('dotenv').config();
 const detailRouter = require("./routes/detailRouter");
 const messageRouter = require('./routes/messageRoute')
-
-
+const creatProductRouter=require('./routes/creatProductRouter')
+const uploadRouter = require('./routes/uploadRouter')
  const navRouter = require('./routes/navRouter');
  const userRouter = require('./routes/userRouter');
  
@@ -49,8 +49,8 @@ app.use("/v1/item", itemRouter);
 app.use('/v1/nav', navRouter);
 app.use('/v1/user', userRouter);
 app.use("/v1/ceate", createItemsRouter);
-
- 
+app.use("/v1/sell",creatProductRouter);
+app.use("/v1/upload", uploadRouter);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);

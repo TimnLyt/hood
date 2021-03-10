@@ -37,7 +37,7 @@ class Nav extends Component {
                     </div>  
                 <nav>
                     <ul class="nav_links">
-                        <li><a href="#">Sell</a> </li>
+                        <li><Link to ='/sell'>Sell</Link> </li>
                         <li><a href="#">About</a> </li>
                         <AuthButtonGroup />
                     </ul>    

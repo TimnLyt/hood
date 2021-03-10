@@ -16,6 +16,8 @@ import FetchOneProd from "./components/FetchOneProd";
 
 import { Auth0Provider } from "@auth0/auth0-react";
 import User from "./components/Userc";
+import CreatProduct from './components/CreatProduct'
+import Profile from './components/Profile'
 // import ItemView from "./components/ItemView";
 export function App() {
   return (
@@ -24,6 +26,7 @@ export function App() {
       <BrowserRouter>
         <Nav/>
           <Switch>
+          <Route exact path="/sell"> <CreatProduct/></Route>
           <Route exact path="/"> <Home/></Route>            
             <Route exact path="/detail/:id">               
              <Imgex />
