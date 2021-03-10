@@ -16,6 +16,7 @@ import FetchOneProd from "./components/FetchOneProd";
 
 import { Auth0Provider } from "@auth0/auth0-react";
 import User from "./components/Userc";
+// import ItemView from "./components/ItemView";
 export function App() {
   return (
  
@@ -33,7 +34,6 @@ export function App() {
 
             <Route exact Path="/User_profile"> <User_profile/></Route>
             <Route exact Path="/chat"> <Chat/></Route>
-
              
             
  

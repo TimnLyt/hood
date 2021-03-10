@@ -18,25 +18,27 @@ const useStyles = makeStyles((theme) => ({
 export default function Item(props){
     const classes = useStyles();
     return(
-        <Card className={classes.root}>
-            <CardActionArea>
-                <CardMedia
-                  component="img"
-                  alt="img"
-                />
-                <CardContent>
-                <Typography variant="h6">
-                    {props.item.item}
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                    {props.item.price}
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                    {props.item.location}
-                    </Typography>
-                    <Link to={`/item/${props.item.id}`}></Link>
-                </CardContent>
-            </CardActionArea>
-        </Card>
+        <Link to='/ItemView'>
+            <Card className={classes.root}>
+                <CardActionArea>
+                    <CardMedia
+                    component="img"
+                    alt="img"
+                    />
+                    <CardContent>
+                    <Typography variant="h6">
+                        {props.item.item}
+                        </Typography>
+                        <Typography variant="body2" color="textSecondary" component="p">
+                        {props.item.price}
+                        </Typography>
+                        <Typography variant="body2" color="textSecondary" component="p">
+                        {props.item.location}
+                        </Typography>
+                        <Link to={`/item/${props.item.id}`}></Link>
+                    </CardContent>
+                </CardActionArea>
+            </Card>
+        </Link>
     );
 }
