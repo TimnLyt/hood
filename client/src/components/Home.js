@@ -1,17 +1,13 @@
  import React from "react"
  import './Home.css';
- import HomePageImg from "./HomePageImg"
- import ItemGroupBox from "./ItemGroupBox"
+ import ItemProvider from "./ItemProvider";
  
  export default function Home (props){
  
         return (
 
         <div className ="wrapper"> 
-        
-        
-        <ItemGroupBox></ItemGroupBox>
-        
+         <ItemProvider></ItemProvider>
          </div>
         )
 }
