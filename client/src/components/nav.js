@@ -22,7 +22,7 @@ class Nav extends Component {
             () => console.log('Nav fetched..', 
             nav)));
     }
-
+     
     render() {
         return (
             <header>
