@@ -15,9 +15,9 @@ ReactDOM.render(
      
      
     <BrowserRouter> 
-    <Auth0ProviderWithHistory> 
-    <App />
-    </Auth0ProviderWithHistory>
+      <Auth0ProviderWithHistory> 
+        <App />
+      </Auth0ProviderWithHistory>
     </BrowserRouter>
     
   </React.StrictMode>,

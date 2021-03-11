@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-
 // This is Thien editing the user profile
 const UserSchema = new mongoose.Schema({
   name: {

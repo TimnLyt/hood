@@ -5,7 +5,7 @@ import {
     Button,
 } from '@material-ui/core';
 import AuthButtonGroup from '../Auth0/AuthButtonGroup';
-
+import Chat from '../Chat';
 
 class Nav extends Component {
     constructor() {
@@ -39,6 +39,7 @@ class Nav extends Component {
                     <ul class="nav_links">
                         <li><a href="#">Sell</a> </li>
                         <li><a href="#">About</a> </li>
+                        
                         <AuthButtonGroup />
                     </ul>    
                 </nav>    
