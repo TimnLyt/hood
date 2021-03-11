@@ -15,9 +15,9 @@ const uploadsRouter = express.Router();
 uploadsRouter.route('/')
   .post(upload.single('image'), (req, res, next) => {
     try {
-      const featuredImage = req.file;
+      const productImage = req.file;
        
-      if (!featuredImage) {
+      if (! productImage) {
         res.status(400);
         res.send({ error: 'No file selected' });
       } else {
