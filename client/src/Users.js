@@ -20,8 +20,7 @@ export default class Users extends Component {
     if (channels.length > 0) {
       alert("chat with this user is already in your conversation list");
     } else {
-      const channel = this.props.chatClient.channel("messaging", userId, {
-        name: `Conversation with ${this.user.name}`
-    });
+      const channel = this.props.chatClient.channel("messaging", userId, {name: `Conversation with ${this.user.name}`});
     }
-    }   
+  }
+}
