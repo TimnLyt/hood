@@ -23,7 +23,6 @@ import Profile from './components/Profile'
 
 export function App() {
   return (
- 
     <>
       <BrowserRouter>
         <Nav/>
@@ -46,7 +45,6 @@ export function App() {
         
       </BrowserRouter>
     </>
- 
   );
 }
 
