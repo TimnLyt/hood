@@ -1,21 +1,23 @@
 import React from 'react';
-import './ItemBox.css';
-//import { Link } from "react-router-dom";
-//import { Link } from 'react-router-dom';
+import { makeStyles,
+         Grid,
+} from "@material-ui/core";
+import ItemList from "./ItemList";       
 
-export default function ItemBox(){
-    return (
-       
-        <div className = "box">
-            
-            <ul class="details">
-            <li>Picture of Item</li>
-            <li>Item Discription</li>
-            <li>$$ Price</li>
-            <li>Item Location</li>
-            <li></li>
-            </ul>
-        </div>
-      
-    )
+const useStyles = makeStyles({
+    root:{
+        maxWdith: 345,
+    },
+});
+
+export default function ItemBox(props){
+  const classes = useStyles();
+  return(
+    <div className ={classes.root}>
+      <Grid container direction="column">
+        <ItemList item={props.item}/>
+      </Grid>
+    </div>
+  )
+
 }
