@@ -7,6 +7,7 @@ router.post("/users/profile").post((req, res) => {
   const content = req.body.content;
   const newUser = new User({
     content,
+    
   });
   newUser.save();
 });
