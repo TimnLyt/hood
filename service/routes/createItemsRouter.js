@@ -28,4 +28,16 @@ createItemsRouter.route("/:id").post((req, res) => {
   newcreateItem.save();
 });
 
+createItemsRouter.route('/:id')
+  .get((req, res, next) => {
+    createItem.findById(req.params.id)
+    .then((createItem)=>{
+       
+      res.json(createItem)
+    })
+    .catch((error)=>{
+      console.log('error, no product with that id')
+    })
+  })
+
 module.exports = createItemsRouter;
