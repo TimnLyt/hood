@@ -3,7 +3,7 @@ const app = express();
 const port = 5000;
 const cors = require('cors');
 //const helmet = require("helmet");
-
+ 
 const mongoose = require("mongoose");
 //require("dotenv").config({ path: '../.env'});
 require('dotenv').config();
@@ -42,6 +42,8 @@ db.on("close", () => {
 });
 app.use(express.json())
 app.use(cors());
+// Static Files
+app.use('/img', express.static('../resources/uploads'));
 
 app.use("/v1/detail", detailRouter);
 app.use('/v1/details',messageRouter);
