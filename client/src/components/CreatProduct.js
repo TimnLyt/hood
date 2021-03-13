@@ -4,6 +4,7 @@ import { withAuthenticationRequired, useAuth0 } from '@auth0/auth0-react';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import axios from 'axios'
+import UploadFile from './UploadFile';
 import {Grid,TextField,FormControl,FormLabel,
     FormControlLabel, 
     InputLabel, 
@@ -161,6 +162,9 @@ return (
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur} 
               />
+            </Grid>
+            <Grid>
+              <UploadFile/>
             </Grid>
              
           </Grid>
