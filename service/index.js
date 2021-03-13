@@ -7,7 +7,7 @@ const cors = require('cors');
 const mongoose = require("mongoose");
 //require("dotenv").config({ path: '../.env'});
 require('dotenv').config();
-const detailRouter = require("./routes/detailRouter");
+ 
 const messageRouter = require('./routes/messageRoute')
 const creatProductRouter=require('./routes/creatProductRouter')
 const uploadRouter = require('./routes/uploadRouter')
@@ -15,7 +15,7 @@ const uploadRouter = require('./routes/uploadRouter')
  const userRouter = require('./routes/userRouter');
  
  const itemRouter = require('./routes/itemRouter')
- const createItemsRouter = require('./routes/createItemsRouter')
+  
 
  
 const user = process.env.MONGO_USER;
@@ -45,12 +45,11 @@ app.use(cors());
 // Static Files
 app.use('/img', express.static('../resources/uploads'));
 
-app.use("/v1/detail", detailRouter);
+ 
 app.use('/v1/details',messageRouter);
 app.use("/v1/item", itemRouter);
 app.use('/v1/nav', navRouter);
 app.use('/v1/user', userRouter);
-app.use("/v1/ceate", createItemsRouter);
 app.use("/v1/sell",creatProductRouter);
 app.use("/v1/upload", uploadRouter);
 
