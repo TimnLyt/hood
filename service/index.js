@@ -7,7 +7,7 @@ const cors = require('cors');
 const mongoose = require("mongoose");
 //require("dotenv").config({ path: '../.env'});
 require('dotenv').config();
-const detailRouter = require("./routes/detailRouter");
+const ProductRouter = require("./routes/productlRouter");
 const messageRouter = require('./routes/messageRoute')
 const creatProductRouter=require('./routes/creatProductRouter')
 const uploadRouter = require('./routes/uploadRouter')
@@ -45,7 +45,7 @@ app.use(cors());
 // Static Files
 app.use('/img', express.static('../resources/uploads'));
 
-app.use("/v1/detail", detailRouter);
+app.use("/v1/seller", ProductRouter);
 app.use('/v1/details',messageRouter);
 app.use("/v1/item", itemRouter);
 app.use('/v1/nav', navRouter);
