@@ -10,15 +10,21 @@ const storage = multer.diskStorage({
     }
 })
 const upload = multer({ storage: storage});
-//const upload = multer({ dest: '../resources/uploads' });
+ 
 const uploadsRouter = express.Router();
 
 uploadsRouter.route('/')
   .post(upload.single('image'), (req, res, next) => {
     try {
+<<<<<<< HEAD
       const image = req.file;
        
       if (!image) {
+=======
+      const productImage = req.file;
+       
+      if (! productImage) {
+>>>>>>> main
         res.status(400);
         res.send({ error: 'No file selected' });
       } else {
