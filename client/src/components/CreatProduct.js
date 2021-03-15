@@ -76,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
       console.log('form values ', values);
       //const authToken = await getAccessTokenSilently();
       const requestConfig = {
-        url: 'http://localhost:5000/v1/sell',
+        url: 'http://localhost:5000/v1/seller',
         method: 'post',
         headers: {
           'Content-Type': 'application/json',
