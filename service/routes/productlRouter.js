@@ -23,11 +23,5 @@ ProductRouter
     })
   })
 
-  ProductRouter.route("/")
-  .get((req, res, next) => {
-    Product.find({}, (err, info) => {
-      if (err) { next(err) }
-      res.send(info);
-    });
-});
+   
 module.exports = ProductRouter;
