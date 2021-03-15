@@ -1,11 +1,13 @@
 const mongoose = require('mongoose');
 
 const productSchema = new mongoose.Schema({
-  id:Number,
-  name:  String,
-  price: Number,
-  Location: String,
-  date: { type: Date, default: Date.now, }
+  price: { type: Number, required: true },
+  title: { type: String, required: true },
+  discription: { type: String, required: false },
+  selling:{ type: Boolean, required: true },
+  date: { type: Date,default: Date.now, required: true },
+  image:{ type: String, required: false },
+  
   
 });
 
