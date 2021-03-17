@@ -27,10 +27,10 @@ export default function Item(props){
                     />
                     <CardContent>
                     <Typography variant="h6">
-                        {props.item.itemsName}
+                        {props.item.item}
                         </Typography>
                         <Typography variant="body2" color="textSecondary" component="p">
-                        {props.item.itemPrice}
+                        {props.item.price}
                         </Typography>
                         <Typography variant="body2" color="textSecondary" component="p">
                         {props.item.location}
