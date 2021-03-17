@@ -7,7 +7,6 @@ import Imgex from "./components/Imgex";
 import Nav from "./components/nav";
 import User_profile from "./components/user_profile";
 import Home from "./components/Home";
-//import ItemGroupBox from "./components/ItemGroupBox.js";
 //import Chat from "./Chat";
 import { Dialog } from "@material-ui/core";
 import Dialogs from "./components/Dialogs";
@@ -18,7 +17,6 @@ import { Auth0Provider } from "@auth0/auth0-react";
 import User from "./components/Userc";
 import CreatProduct from './components/CreatProduct'
 import Profile from './components/Profile'
-// import ItemView from "./components/ItemView";
 
 
 export function App() {
