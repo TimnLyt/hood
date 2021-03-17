@@ -2,10 +2,11 @@ const express = require("express");
 const itemRouter = express.Router();
 
 const ItemInfo = require('../models/ItemInfo');
+const Product = require('../models/productModel');
 
 itemRouter.route("/")
   .get((req, res, next) => {
-    ItemInfo.find({}, (err, info) => {
+    Product.find({}, (err, info) => {
       if (err) { next(err) }
       res.send(info);
     });
