@@ -4,6 +4,7 @@ import { withAuthenticationRequired, useAuth0 } from '@auth0/auth0-react';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import axios from 'axios'
+import UploadFile from './UploadFile';
 import {Grid,TextField,FormControl,FormLabel,
     FormControlLabel, 
     InputLabel, 
@@ -75,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
       console.log('form values ', values);
       //const authToken = await getAccessTokenSilently();
       const requestConfig = {
-        url: 'http://localhost:5000/v1/sell',
+        url: 'http://localhost:5000/v1/seller',
         method: 'post',
         headers: {
           'Content-Type': 'application/json',
@@ -161,6 +162,9 @@ return (
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur} 
               />
+            </Grid>
+            <Grid>
+              <UploadFile/>
             </Grid>
              
           </Grid>
