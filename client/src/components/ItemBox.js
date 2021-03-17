@@ -6,7 +6,7 @@ import ItemList from "./ItemList";
 
 const useStyles = makeStyles({
     root:{
-        maxWdith: 345,
+        maxWdith: 500,
     },
 });
 
