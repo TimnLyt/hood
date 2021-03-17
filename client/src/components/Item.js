@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        padding: theme.spacing(2),
+        padding: theme.spacing(1),
     },
 }));
 
@@ -27,18 +27,16 @@ export default function Item(props){
                     />
                     <CardContent>
                     <Typography variant="h6">
-                        {props.item.item}
+                        {props.item.title}
                         </Typography>
-                        <Typography variant="body2" color="textSecondary" component="p">
-                        {props.item.price}
-                        </Typography>
-                        <Typography variant="body2" color="textSecondary" component="p">
-                        {props.item.location}
+                        <Typography variant="body1" color="textSecondary" component="p">
+                        $ {props.item.price}
                         </Typography>
                         <Link to={`/item/${props.item.id}`}></Link>
                     </CardContent>
                 </CardActionArea>
             </Card>
         </Link>
+
     );
 }
