@@ -6,6 +6,9 @@ import {
 } from '@material-ui/core';
 import AuthButtonGroup from '../Auth0/AuthButtonGroup';
 
+const sellbutton = {
+    margin: "auto 15px auto auto",
+}
 
 class Nav extends Component {
     constructor() {
@@ -36,9 +39,12 @@ class Nav extends Component {
                         </a>
                     </div>  
                 <nav>
-                    <ul class="nav_links" >
-                        <li ><Link to ='/sell'>Sell</Link> </li>
-                        <li><a href="#">About</a> </li>
+ 
+                    <ul class="nav_links">
+                        <div style={sellbutton}>
+                        <li><Link to ='/sell'>Sell</Link> </li>
+                        </div>
+ 
                         <AuthButtonGroup />
                     </ul>    
                 </nav>    
