@@ -39,10 +39,10 @@ export default function ItemGrid({ items }) {
             cols={item.cols || 1}
             className={classes.gridTile}
           >
-            <img src={`http://localhost:5000${item.image}`} alt={item.item} />
+            <img src={`http://localhost:5000${seller.image}`} alt={item.item} />
             <GridListTileBar
-              title={item.item}
-              subtitle={item.price}
+              title={item.itemsName}              }
+              subtitle={item.itemPrice              }
               actionIcon={(
                 <IconButton
                   aria-label={`info about ${item.item}`}

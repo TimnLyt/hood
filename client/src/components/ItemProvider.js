@@ -25,7 +25,7 @@ class ItemProvider extends React.Component{
         console.log("[ItemProvider] componentDidMount");
 
         const requestConfig = {
-            url: "http://localhost:5000/v1/item",
+            url: "http://localhost:5000/v1/seller",
             method: "get",
             headers: { "Content-Type" : "application/json"},
         };
