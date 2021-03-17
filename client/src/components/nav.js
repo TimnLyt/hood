@@ -26,7 +26,7 @@ class Nav extends Component {
     render() {
         return (
             <header>
-                <Link to='/Home'>
+                <Link to='/'>
                 <h2>OfferUp</h2>
                 </Link>
                     <div class="search-box">
