@@ -86,9 +86,9 @@ export default function UploadFile  ()  {
             <div className={classes.input}> 
           <label htmlFor="image">{ } 
           {selectedFile ? (
-            <span>You have selected a file - {fileName}</span>
+            <span style={{fontSize:18}}>You have selected a file - {fileName}</span>
             ) : (
-             <span>Choose a file...</span>
+             <span style={{fontSize:18}} >Choose a file...</span>
                 )}
           <br />
           <input
@@ -102,6 +102,7 @@ export default function UploadFile  ()  {
              variant="contained"
              color="primary"
              component="span"
+             style={{fontSize:18}} 
            >
                Choose a image:
            </Button>
@@ -113,6 +114,7 @@ export default function UploadFile  ()  {
                  className={classes.upload}
                 disabled={!selectedFile}
                 onClick={handleSubmit}
+                style={{fontSize:18}} 
                 >
                     Upload
             </Button>

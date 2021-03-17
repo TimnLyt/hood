@@ -17,9 +17,10 @@ import {Grid,TextField,FormControl,FormLabel,
     Container,
 }from "@material-ui/core";
 const validationRules = yup.object({
+   
     title: yup.string('Titile').required('Title required'),
      
-    price: yup.number('Price').required('Price required'),
+    price: yup.number('Price').positive("Number must be positive").required('Price required'),
     discription: yup.string('Discription').required('discription required'),
     //condition: yup
      // .string('condition')
@@ -32,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
   can:{
     marginLeft: '15%',
     width: "70%",
+    background:'#f5fffa'
   },
   paper: {
     marginTop: theme.spacing(5),
@@ -51,6 +53,9 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
+  forminput:{
+    fontsize:22,
+  }
 }));
  
  
@@ -126,34 +131,47 @@ return (
                 name="title"
                 variant="outlined"
                 fullWidth
-                label="Title"
+                inputProps={{style: {fontSize: 18}}} // font size of input text
+                InputLabelProps={{style: {fontSize: 8}}}
+                className={classes.forminput}
+                placeholder="Product Name"
                 multiline
-                rows={2} 
+                rows={2}
+                style={{fontSize:23}} 
                 value={formik.values.title}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
+                helperText={formik.touched.title ? formik.errors.title : ""}
                 error={formik.touched.title && Boolean(formik.errors.title)}
+                 
+                
               />
             </Grid>
             <Grid item xs={12}  >
               <TextField
                 variant="outlined"
-                required
+                inputProps={{style: {fontSize: 18}}} // font size of input text
+                InputLabelProps={{style: {fontSize: 18}}}
                 fullWidth
-                label="price"
+                className={classes.forminput}
+                label="Price"
                 name="price"
                 multiline
                 value={formik.values.price}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 error={formik.touched.price && Boolean(formik.errors.price)}
+                helperText={formik.touched.price ? formik.errors.price : ""}
               />
             </Grid>
             <Grid item xs={12}>
               <TextField
                 variant="outlined"
+                inputProps={{style: {fontSize: 18}}} // font size of input text
+                InputLabelProps={{style: {fontSize: 18}}}
                 required
                 fullWidth
+                className={classes.forminput}
                 label="Discription"
                 name="discription"
                 multiline
@@ -176,6 +194,7 @@ return (
             className={classes.submit}
             type="submit"
             form="productCreateForm"
+            style={{fontSize:18}} 
           >
             Post
           </Button>
