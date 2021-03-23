@@ -106,7 +106,7 @@ const useStyles = makeStyles((theme) => ({
   if (success) {
     return (
       <>
-        <Typography variant="h2" gutterBottom> 
+        <Typography variant="h3" gutterBottom> 
         Product created
         </Typography>
         <Button onClick={() => {window.location.href="/sell"}}>Post Another</Button>
