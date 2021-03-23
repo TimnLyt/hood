@@ -10,8 +10,8 @@ import Home from "./components/Home";
 //import Chat from "./Chat";
 import { Dialog } from "@material-ui/core";
 import Dialogs from "./components/Dialogs";
-import FeatchProduct from "./components/FetchOneProd";
-import FetchOneProd from "./components/FetchOneProd";
+//import FeatchProduct from "./components/ProductDetail/FetchOneProd";
+import FetchOneProd from "./components/ProductDetail/FetchOneProd";
 
 import { Auth0Provider } from "@auth0/auth0-react";
 import User from "./components/Userc";
@@ -28,7 +28,7 @@ export function App() {
           <Route exact path="/sell"> <CreatProduct/></Route>
           <Route exact path="/"> <Home/></Route>            
             <Route exact path="/detail/:id">               
-             <Imgex />
+              
               <FetchOneProd />
               <User />
             </Route>

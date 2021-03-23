@@ -10,7 +10,7 @@ import {
 import Cont from './Cont';
  
 import User from './Userc';
-import FetchOneProd from './FetchOneProd'
+import FetchOneProd from '../components/ProductDetail/FetchOneProd'
 const useStyles = makeStyles((theme) => ({
     user: {
        
