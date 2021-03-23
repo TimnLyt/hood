@@ -7,7 +7,6 @@ import Imgex from "./components/Imgex";
 import Nav from "./components/nav";
 import User_profile from "./components/user_profile";
 import Home from "./components/Home";
-//import Chat from "./Chat";
 import { Dialog } from "@material-ui/core";
 import Dialogs from "./components/Dialogs";
 import FeatchProduct from "./components/FetchOneProd";
@@ -38,7 +37,6 @@ export function App() {
  
 
             <Route exact Path="/User_profile"> <User_profile/></Route>
-            <Route exact Path="/chat"></Route>
              
             
  
