@@ -16,14 +16,15 @@ const uploadsRouter = express.Router();
 uploadsRouter.route('/')
   .post(upload.single('image'), (req, res, next) => {
     try {
-      const image = req.file;
+      const images = req.file;
        
-      if (!image) {
+      if (!images) {
         res.status(400);
         res.send({ error: 'No file selected' });
       } else {
-        res.send({ message: 'Success' +image.originalname});
-        console.log(image)
+         return res.json({ Successs:true, image:images.path,
+        filename: images.fieldname })
+        console.log(images)
         }
     } catch (err) {
       next(err);

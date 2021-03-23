@@ -32,13 +32,14 @@ const useStyles = makeStyles((theme) => ({
 
  //old
 
-export default function FileUploader  ()  {
+export default function FileUploader  (props)  {
     const classes = useStyles();
     const [selectedFile, setSelectedFile] =useState(null);
     const [fileName, setFileName]= useState(null)
     const [uploadProgress, setUploadProgress]=useState()
     const [error, setError] = useState(null);
     const [success, setSuccess]= useState()
+    const [file, setFile]=useState(null)
     const handleCapture = ({ target }) => {
          
           setSelectedFile(target.files[0]);
@@ -53,8 +54,9 @@ export default function FileUploader  ()  {
             if (selectedFile) {
                 uploadFile('image', selectedFile, progressUpdater)
                 .then((response) => {
-                  console.log(response.data.message);
-                  setSelectedFile(null);
+                  console.log(response.data.image);
+                  setFile(response.data.image);
+                  props.refreshFunction(response.data.image)
                   setSuccess(true);
                 })
                 .catch((err) => {

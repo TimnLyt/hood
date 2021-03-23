@@ -61,12 +61,18 @@ const useStyles = makeStyles((theme) => ({
  
  
 
- function CreatProduct() {
+ function CreatProduct(props) {
   const classes = useStyles();
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(null);
-
-  const now = new Date();
+  const [images, setImages]= useState();
+    
+  const updateImages=(newImage)=>{
+    setImages(newImage)
+   console.log(images)
+     
+  } 
+  const now = new Date(); 
   const formik = useFormik({
     initialValues: {
       title: '',
@@ -75,8 +81,10 @@ const useStyles = makeStyles((theme) => ({
       //condition: '',
       selling:true,
       date: now.toISOString().substring(0, 10),
+      image:images
        
     },
+    
     validationSchema: validationRules,
     onSubmit: async(values) => {
       console.log('form values ', values);
@@ -88,6 +96,7 @@ const useStyles = makeStyles((theme) => ({
           "Content-Type": "application/json",
            
         },
+        
         data: {
           title: values.title,
           price: values.price,
@@ -95,7 +104,7 @@ const useStyles = makeStyles((theme) => ({
           discription: values.discription,
           //condition: values.condition,
           selling: values.selling,
-           
+             
         },
       };
 
@@ -105,9 +114,11 @@ const useStyles = makeStyles((theme) => ({
         })
         .catch((err) => {
           setError(err);
-        });
+        });      
     },
+    
   });
+   
   if (success) {
     return (
       <>
@@ -192,7 +203,7 @@ else {
               />
             </Grid>
             <Grid>
-              <UploadFile/>
+              <UploadFile refreshFunction={updateImages}/>
             </Grid>
              
           </Grid>
