@@ -14,7 +14,7 @@ h2{
 li, a {
     font-family: "Alfa+Slab+One&display", sans-serif;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 24px;
     color: #edf0f1;
     text-decoration: none;
 }
@@ -91,6 +91,7 @@ a {
 .nav_links {
     display: flex;
     list-style: none;
+     
 }
 
 .nav_links li .search-box {

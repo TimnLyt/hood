@@ -14,12 +14,14 @@ import { useParams } from 'react-router-dom';
  
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1
+    flexGrow: 1,
+     
   },
   paper: {
     padding: theme.spacing(2),
     margin: "auto",
-    maxWidth: 950
+    maxWidth: 950,
+    background:'#fffafa'
   },
   image: {
     width: 428,
@@ -71,10 +73,10 @@ const classes = useStyles();
         <Grid item xs={12} sm container>
           <Grid item xs container direction="column" spacing={2}>
             <Grid item xs>
-              <Typography gutterBottom variant="subtitle1">
+              <Typography gutterBottom variant="subtitle1" style={{fontSize:24}}>
                 Title:{Products.title}
               </Typography>
-              <Typography variant="subtitle1" gutterBottom>
+              <Typography variant="subtitle1" gutterBottom  >
                 Discription: {Products.discription}
               </Typography>
                
@@ -86,7 +88,7 @@ const classes = useStyles();
             </Grid>
           </Grid>
           <Grid item>
-            <Typography variant="subtitle1"> ${Products.price}</Typography>
+            <Typography variant="subtitle1" style={{fontSize:24}}> ${Products.price}</Typography>
           </Grid>
         </Grid>
       </Grid>
