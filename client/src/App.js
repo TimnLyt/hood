@@ -7,6 +7,10 @@ import Imgex from "./components/Imgex";
 import Nav from "./components/nav";
 import User_profile from "./components/user_profile";
 import Home from "./components/Home";
+<<<<<<< HEAD
+=======
+//import ItemGroupBox from "./components/ItemGroupBox.js";
+>>>>>>> 054b03be245bb07ff14f63858c86e46cda3ee424
 //import Chat from "./Chat";
 import { Dialog } from "@material-ui/core";
 import Dialogs from "./components/Dialogs";
@@ -35,7 +39,11 @@ export function App() {
  
 
             <Route exact Path="/User_profile"> <User_profile/></Route>
+<<<<<<< HEAD
             <Route exact Path="/chat"> </Route>
+=======
+            
+>>>>>>> 054b03be245bb07ff14f63858c86e46cda3ee424
              
             
  
