@@ -22,7 +22,7 @@ uploadsRouter.route('/')
         res.status(400);
         res.send({ error: 'No file selected' });
       } else {
-        res.send({ message: 'Success' });
+        res.send({ message: 'Success' +image.originalname});
         console.log(image)
         }
     } catch (err) {
