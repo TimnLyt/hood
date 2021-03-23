@@ -4,7 +4,8 @@ import { withAuthenticationRequired, useAuth0 } from '@auth0/auth0-react';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 import axios from 'axios'
-import UploadFile from './UploadFile';
+import UploadFile from './upload/FileUploader';
+import { Redirect,Link } from 'react-router-dom';
 import {Grid,TextField,FormControl,FormLabel,
     FormControlLabel, 
     InputLabel, 
@@ -79,7 +80,7 @@ const useStyles = makeStyles((theme) => ({
         url: 'http://localhost:5000/v1/seller',
         method: 'post',
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
            
         },
         data: {
@@ -102,9 +103,18 @@ const useStyles = makeStyles((theme) => ({
         });
     },
   });
-
-
-return (
+  if (success) {
+    return (
+      <>
+        <Typography variant="h2" gutterBottom> 
+        Product created
+        </Typography>
+        <Button onClick={() => {window.location.href="/sell"}}>Post Another</Button>
+      </>
+    )
+   }
+else {
+  return (
     <Card component="main" className={classes.can}  
      >
        
@@ -190,8 +200,8 @@ return (
       </div>
        
     </Card>
-)
- 
+  )
+}
 };
 export default withAuthenticationRequired(CreatProduct, {
     returnTo: () => '/sell',
