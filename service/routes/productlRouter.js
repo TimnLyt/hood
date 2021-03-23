@@ -13,13 +13,13 @@ ProductRouter.route('/').post(productController.creatProduct)
 ProductRouter
   .route('/:id')
   .get((req, res, next) => {
-    Product.findById(req.params.id)
-    .then((Product)=>{
-       
-      res.json(Product)
-    })
-    .catch((error)=>{
-      console.log('error, no product with that id')
+    Product.findById(req.params.id,(err, products)=>{
+    if (err) { next(err) } 
+    else if (products) {
+      res.send(products);
+    } else {
+      res.sendStatus(404);
+    }
     })
   })
 
