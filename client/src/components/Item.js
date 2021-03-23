@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Item(props){
     const classes = useStyles();
     return(
-        <Link to='/ItemView'>
+        <Link to={`/detail/${props.item._id}`}>
             <Card className={classes.root}>
                 <CardActionArea>
                     <CardMedia
@@ -33,10 +33,10 @@ export default function Item(props){
                          $ {props.item.price}
                         </Typography>
 
-                        <Link to={`/item/${props.item.id}`}></Link>
+                       
                     </CardContent>
                 </CardActionArea>
             </Card>
-        </Link>
+        //</Link>
     );
 }

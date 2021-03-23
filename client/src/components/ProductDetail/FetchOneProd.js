@@ -1,5 +1,7 @@
 import React, { useEffect,useState } from 'react';
-import './All.css'
+//import '../All.css'
+
+import loading from '../Loading'
 import {
   Card,
   Paper,
@@ -8,7 +10,7 @@ import {
   Typography,
   Grid
 } from "@material-ui/core";
-import Cont from './Cont';
+import Cont from '../Cont';
  import axios from 'axios'
 import { useParams } from 'react-router-dom';
  
@@ -41,21 +43,26 @@ const classes = useStyles();
  const url = `http://localhost:5000/v1/seller/${id}`
   
   const [Products, setProducts]= useState([]);
-//const [error,setError]=useState(null)
+  const [error,setError]=useState(null)
+  const [loading,setLoading]=useState(true)
     let content=null
 
-  useEffect(()=>{
-     axios.get(url)
-     .then(res =>{
-         setProducts(res.data)
-     })
-       
-}, [url]);
+    useEffect(() => {
+      axios.get(url)
+          .then(res => {
+              setProducts(res.data);
+              setLoading(false);
+          })
+          .catch(err => {
+              setError(err.message);
+              setLoading(false)
+          })
+    }, [url]);
     
     if(!Products){
         return <div>No product with this id</div>
     }
-
+ 
     return (
     <div className={classes.root}>
     <Paper className={classes.paper}>
@@ -64,7 +71,7 @@ const classes = useStyles();
           <CardMedia
             style={{height:"300px"}}
             className={classes.image}
-            title="complex"
+            title="Image"
             src="C:\Users\abety\Documents\Orilylearn\creatreact\my-app\src\image\hp2.png"
             
              
@@ -80,6 +87,7 @@ const classes = useStyles();
                 Discription: {Products.discription}
               </Typography>
                
+               
             </Grid>
             <Grid item>
               <Typography variant="body2" style={{ cursor: "pointer" }}>
@@ -94,5 +102,6 @@ const classes = useStyles();
       </Grid>
     </Paper>
   </div>
-    )  
+    )
+     
 }
