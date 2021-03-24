@@ -37,6 +37,6 @@ export default function Item(props){
                     </CardContent>
                 </CardActionArea>
             </Card>
-        //</Link>
+        </Link>
     );
 }
