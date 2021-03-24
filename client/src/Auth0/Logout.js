@@ -33,11 +33,11 @@ export default function Logout() {
         color="inherited"
         onClick={() =>
           logout({
-            screen_hint: "Chat",
+            screen_hint: "Profile",
           })
         }
       >
-        Chat
+        PROFILE
       </Button>
     </>
   );
