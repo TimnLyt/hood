@@ -8,7 +8,7 @@
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    background-color: yellow;
+    background-color: white;
 }
 
 .container1 {
@@ -18,13 +18,11 @@
     display: block;
     margin-left: 12%;
     margin-right: 12%;
-    background-color: aqua;
+    background-color: #FAFAFA;
 }
 
-
-
 .info {
-    background-color: red;
+    background-color: #FAFAFA;
     height: 900px;
     margin-left: -5%;
     width: 30%;
@@ -34,12 +32,13 @@
 
 .photo {
     position: relative;
-    background: purple;
+    background-color: #FAFAFA;
     height:200px;
     width:200px;
     border-radius: 50%;
     margin: 0 auto;
     top: -10%;
+    border: 1px solid black;
 }
 
 .underphoto {
@@ -113,7 +112,6 @@
 }
 
 .reviewboard {
-    background: orange;
     width: 100%;
     height: 200px;
 }
@@ -143,13 +141,13 @@
     display: block;
     width: 30%;
     height: 650px;
+    background-color: #FAFAFA;
 }
 
 .info2top {
     display: inline-block;
     width: 100%;
     height: 10%;
-    background: blueviolet;
 }
 
 .hr1info2 {
@@ -171,13 +169,13 @@
     display: inline-block;
     width: 100%;
     height: 85%;
-    background:cornflowerblue;
+    background-color: #FAFAFA;
 }
 
 .footer {
     position: relative;
     height: 160px;
-    background: lightblue;
+    background: rgb(33, 124, 53);
 }
 
 .user_links {
