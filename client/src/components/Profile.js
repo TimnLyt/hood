@@ -1,7 +1,6 @@
 import React from "react";
 import {Card,makeStyles,Grid, Typography} from  "@material-ui/core";
 import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react";
-import  Loading  from "./Loading";
 const useStyles = makeStyles((theme) => ({
     root: {
     padding: theme.spacing(1),
@@ -51,5 +50,5 @@ const Profile = () => {
 };
 
 export default withAuthenticationRequired(Profile, {
-  onRedirecting: () => <Loading />,
+  returnTo: () => '/Profile',
 });

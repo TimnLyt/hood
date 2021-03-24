@@ -25,20 +25,6 @@ export default function Logout() {
       >
         Log Out
       </Button>
-
-      {/* to be directed to chat */}
-      <Button
-        className={classes.navOption}
-        variant="outlined"
-        color="inherited"
-        onClick={() =>
-          logout({
-            screen_hint: "Profile",
-          })
-        }
-      >
-        PROFILE
-      </Button>
     </>
   );
 }
