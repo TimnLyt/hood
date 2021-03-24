@@ -1,7 +1,6 @@
  import React from "react"
  import './Home.css';
- import ItemProvider from "./ItemProvider";
- 
+ import ItemProvider from './Items/ItemProvider';
  export default function Home (props){
  
         return (
