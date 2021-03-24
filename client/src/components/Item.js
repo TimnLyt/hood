@@ -12,6 +12,7 @@ import { Link } from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
     root: {
         padding: theme.spacing(1),
+        margin: 10,
     },
 }));
 

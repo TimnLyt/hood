@@ -3,5 +3,6 @@
     flex-direction: row-reverse;
     width: 100vw;
     justify-content: space-evenly;
+    margin-right: 100px;
   }
 
