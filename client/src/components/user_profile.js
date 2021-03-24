@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './user_profile.css';
+import { withAuthenticationRequired } from "@auth0/auth0-react";
 
 
 class User_profile extends Component {
@@ -82,4 +83,8 @@ class User_profile extends Component {
     }
 }
 
-export default User_profile;  
+
+export default withAuthenticationRequired(User_profile, {
+    returnTo: () => '/Profile',
+});
+
