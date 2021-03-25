@@ -53,7 +53,7 @@ export default function User(props) {
     <div className={classes.paper}> 
         
      
-          <h3>User </h3>
+          
           <div className={classes.rbutton}>
       <ButtonGroup color="primary" aria-label="large outlined primary button group">
         <Button>Offer</Button>

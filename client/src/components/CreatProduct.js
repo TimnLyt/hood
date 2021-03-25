@@ -209,11 +209,7 @@ else {
             Post
           </Button>
           <Grid container justify="flex-end">
-            <Grid item>
-               
-               product
-              
-            </Grid>
+             
           </Grid>
         </form>
       </div>
@@ -223,5 +219,5 @@ else {
 }
 };
 export default withAuthenticationRequired(CreatProduct, {
-    returnTo: () => '/sell',
+  returnTo: () => "/sell",
 });
