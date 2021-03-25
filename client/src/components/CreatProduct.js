@@ -128,7 +128,7 @@ else {
            
         </Avatar>
         <Typography component="h1" variant="h5">
-          Creat Product
+          Create Product
         </Typography>
         <form 
         className={classes.form} noValidate
