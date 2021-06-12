@@ -1,6 +1,10 @@
 # Cloning OfferUp - Resale Application
 Creating a resale application that provides a marketplace for people to sell their things.
 
+## How to start:
+* npm start on services
+* npm start on client
+
 ## Table of Contents
 * [General info](#general-info)
 * [Introduction](#introduction)
