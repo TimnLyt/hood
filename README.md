@@ -4,7 +4,7 @@ Creating a resale application that provides a marketplace for people to sell the
 ## Table of Contents
 * [General info](#general-info)
 * [Introduction](#introduction)
-* [How to start](#How to start)
+* [How to start](#How-to-start)
 
 ## General info 
 Group members:
