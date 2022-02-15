@@ -4,6 +4,7 @@ Creating a resale application that provides a marketplace for people to sell the
 ## Table of Contents
 * [General info](#general-info)
 * [Introduction](#introduction)
+* [Project Explination](#Project-Explination)
 * [How to start](#How-to-start)
 
 ## General info 
@@ -29,6 +30,9 @@ Project is created with:
 Team name: Team Hood
 <br/>
 This team will be recreating a resale application that will provide  a market place for sellers and buyers.
+
+## Project Explination
+Created an OfferUp clone for my Web App Development course. Using mainly JavaScript and some HTML/CSS.
 
 ## How to start
 * npm start on services
